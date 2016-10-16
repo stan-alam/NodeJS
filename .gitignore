@@ -1,0 +1,8 @@
+node_modules
+npm-debug.log*
+mochawesome-reports/*
+logs/*
+.env
+build
+develop.json
+
