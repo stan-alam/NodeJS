@@ -38,7 +38,12 @@ too much freedom.”
 
 I/O bound problems are alleviated by increased throughput in I/O such as disk, memory and network bandwidth, and improved data caching. Many problems are I/O bound, and it's not this domain that Node truly shines.  e.g. the C10K problem which poses the dilemma of how to handle ten thousand or more concurrent connections for a web server. Some technologies platforms are ill-equiped for managing this type of capacity and require various patches and workarounds. NODE excels at this task because it's based on a nonblocking, asynch architecture.
 
+Node provides a built-in, bare-bones HTTP server. Built on top of this is Connect, a middleware framework that provides support for cookies, sessions, logging, and compression, to name a few. On top of connect is Express,
+which has support for routing, templates (usomg the Jade templating engine) and view rendering.
+
 What is cloud-based NoSQL?
+
+
 
 
 
