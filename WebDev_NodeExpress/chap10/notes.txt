@@ -1,0 +1,35 @@
+Route handlers ( app.get, app.post, etc. --often referred to collectively as app.VERB) can thought of as middleware that handle only specific HTTP verb (GET, POST, etc.) Conversely, middleware can thought as a rout handler that handles HTTP verbs; there are some minor differences with exotic verbs such as PURGE, but for the common verbs, the effect is the same.
+
+Route handlers require a path as their first parameter. For any route /*.
+Middleware can also take a path as its first parameter, but it is optional ( if it is omitted, it will match any path, specified by /\*)
+
+Route handlers and middleware take a callback function that takes two, three, or four parameters ( technically, you could have zero or one parameters, but there is no sensible use for these forms)
+
+If there are two or three parameters, the first two parameters are request and response objects, and the third parameter is the next function. If there are four parameters, it becomes an error-handling middleware, and the first parameter becomes an error object, followed by the request, response and next objects.
+
+If you don't call next(), the pipeline will be terminated and no more route handlers or middleware will be processed. If you don't call next(), you should send a response to the client(res.send, res.json, res.render, etc) if you don't, the client will time out.
+
+if you do call next(), it is inadvisable to send a response to the client. If you do, middleware or route handlers further down the pipeline will be executed, but any client responses they send will be ignored.
+
+
+app.use( function(req, res, next) {
+    console.log('processing request for "' + req.url + '"....');
+});
+
+app.use( function( req, res, next) {
+    console.log('terminating request');
+    res.send('thanks for playing!');
+    // note we do not call next() here... this function terminates the request
+});
+
+app.use( function( req, res, next){
+    console.log('whoops, i\'ll never get called!');
+});
+
+three middlewares. 1. logs a message to the console before passing on the request to the next middleware in the pipeline by calling next()
+2. This middleware handles the request. If res.send is omitted no response will be returned to the client. The client will time out, the last middleware will not execute.
+
+
+
+
+
