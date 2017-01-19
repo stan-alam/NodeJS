@@ -1,0 +1,10 @@
+Rest API application has the advantage of an application focused only on feeding any client-side application with data. It is common for modern applications to be web apps/mobile apps that consume data from one more API.
+
+This means that several kinds of client apps consult the same server focused on dealing with data.
+
+Express is a minimalist web framework that was highly inspired by RUBY sinatra.
+
+The framework allows you to build API and also to create simple web sites.
+
+Express is focused on working with views, routs, and controllers -- models are not handled. This allows
+the developer to use any persistence framework
