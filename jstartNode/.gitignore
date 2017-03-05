@@ -3,3 +3,5 @@ npm-debug.log*
 /authentication/node_modules/*
 /authentication/images/*
 mochawesome-reports/*
+/chap01/node_modules
+/chap01/node_modules/*
