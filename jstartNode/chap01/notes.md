@@ -14,7 +14,7 @@ The V8 engine is extremely fast; in fact, it's several times faster than other s
 The official description talks about the event-driven, non-blocking I/O model. Traditionally, programming is done in a synchronous manner: a line of code is executed, the system waits for the result, ..etc.
 At times waiting for a result can take a long time; for example reading from a DB or writing to a network.
 
-In languages such as JAVA and C#, one solution is to spawn a new thread. A thread may be thought of as a lightweight process that performs tasks. Threaded programming can be difficult because multiple threads can be trying to access the same source concurrently.
+In languages such as JAVA and C#, one solution is to spawn a new thread. **A thread may be thought of as a lightweight process that performs tasks. Threaded programming can be difficult because multiple threads can be trying to access the same source concurrently.**
 
 JS approaches this problem differently. There is only ever a single thread. When doing slow I/O operations such as reading a database, the program does not wait. Instead, it immediately continues to the next line of code. When the I/O operation returns, it triggers a callback function, and the result can be processed.
 
@@ -43,6 +43,36 @@ which has support for routing, templates (using the Jade templating engine) and 
 
 What is cloud-based NoSQL?
 
+**NoSQL is useful for cloud-based technologies, it allows applications to scale: additional virtual servers can be brought online with just a few mouse clicks.**
+
+	Avoiding Dependency Hell
+
+	It is possible to specify * instead of a specific dependency number.
+	This however can cause problems with compatibility. The next upgrade
+	may break your code, e.g. next chrome browser may not be compatible
+	with chrome driver v 2.x 
+
+For chap01: install express
+
+and then run : 
+
+	express authentication
+
+cd into the authentication directory
+
+	npm install
+
+and then
+
+	node app
+
+This will start the express server on port 3000 at localhost
+
+
+## Creating a basic form
+
+Next create a basic form to post data to the server. With web servers such as Apache, you would place a file in the directory such index.html, and some binary for example cgi-bin
+**common gateway interface** node is different in such that 
 
 
 

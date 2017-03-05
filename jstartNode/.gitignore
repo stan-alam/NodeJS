@@ -5,3 +5,5 @@ npm-debug.log*
 mochawesome-reports/*
 /chap01/node_modules
 /chap01/node_modules/*
+/chap01/authentication
+/chap01/authentication/*
