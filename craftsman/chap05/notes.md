@@ -1,10 +1,10 @@
 ## Synchronous and Asynchronous Operations Explained
 
-+--->---+   +---->--+  +-->---+  +---->--+
-|       |	|	    |  |      |  |       |
-|       |   |       |  |      |  |       |
-|       |   |	    |  |      |  |       |
-+-------+   +-------+  +------+  +-------+
+		+--->---+   +---->--+  +-->---+  +---->--+
+		|       |	|	    |  |      |  |       |
+		|       |   |       |  |      |  |       |
+		|       |   |	    |  |      |  |       |
+		+-------+   +-------+  +------+  +-------+
 
 
 model as a row of loops
@@ -27,18 +27,18 @@ console.log('Multiverse');
 ```
 
 
-												+--->-------------+
-												|				  |
-												| print           |
-												|    "Hello"      |
-												|    to console   |
-												|                 |
-												| print           |
-												|    "Multiverse" |
-												|     to console  |
-												|                 |
-												|                 |
-												+-----------------+
+			+--->-------------+
+			|				  |
+			| print           |
+			|    "Hello"      |
+			|    to console   |
+			|                 |
+			| print           |
+			|    "Multiverse" |
+			|     to console  |
+			|                 |
+			|                 |
+			+-----------------+
 
 In this model the application writes text to the screen, then writes another text to the screen, using console.log(). These are synchronous operations. They both happen within the same iteration loop.
 
@@ -57,15 +57,15 @@ This will print "Hello" and "Multiverse!" on the screen,  but the second text is
 
 The set **setTimeout** function is an asynchronous operation. The code is passed to be executed in the body of an anonymous function. This anonymous function is called the **callback** function.
 
-									+--->---+   +---->--+  +-->---+  +---->--+
-									|       |	|	    |  |      |  |       |
-									|  f1   |   |       |  |      |  |  f2   |
-									|       |   |	    |  |      |  |       |
-									+--+----+   +-------+  +------+  +-------+
-									   |  setTimeout(callback, 1000)   | callback()
-									   |_______________________________|
+		+--->---+   +---->--+  +-->---+  +---->--+
+		|       |	|	    |  |      |  |       |
+		|  f1   |   |       |  |      |  |  f2   |
+		|       |   |	    |  |      |  |       |
+		+--+----+   +-------+  +------+  +-------+
+		   |  setTimeout(callback, 1000)   | callback()
+		   |_______________________________|
 
-									  			time is going by ....
+		  			time is going by ....
 
 
 
