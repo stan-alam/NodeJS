@@ -49,7 +49,7 @@ myCar.drive = function() {
 myCar.honk(); //outputs "beep, beep"
 myCar.drive(); // outputs "vroom, vroom!"
 
-```javascript
+```
 
 This will be a very verbose way off adding method to an object.
 
