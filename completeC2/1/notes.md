@@ -110,6 +110,16 @@ Application runs on one thread, in blocking for each request, you have to beef u
 CPU resources to build those multiple threads.
 
 
+**to find some functionality that you would like to import into your node applications use npm**
+
+Usually there is a 3rd party module that is available
+
+**Node is good because its non-blocking**
+
+**Node has a great ecosystem**
+
+Python still has 3rd party modules that are built on blocking, even if it is "non-blocking"
+
 
 
 
