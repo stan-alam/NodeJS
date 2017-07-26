@@ -75,3 +75,23 @@ console.log(user);
 fs.appendFile('username.txt', `Hola, ${user.username}!`);
 
 ```
+
+
+---------------------------------------------------------------------
+
+
+# 3.3
+
+create your own modules and use require
+
+
+# 3.4 Using 3rd party modules
+
+
+Utility functions that exist
+
+**To start using modules** - use **npm init**
+
+npm init creates the package.json, a simple description of your packages
+
+**lodash** is a great utility module 

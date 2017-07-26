@@ -9,8 +9,7 @@ console.log('starting nodesjs');
 
 module.exports.add = (a, b) => {
   var sum = a + b;
-
   console.log('this is the sum', a + b);
   return sum;
-}
+};
   //arrow function will not bind this keyword or arguments array
