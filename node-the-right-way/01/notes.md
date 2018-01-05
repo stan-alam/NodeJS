@@ -18,7 +18,7 @@
 **Detecting file changes comes in useful for example automated deployments
 and running unit tests**
 
-'use strict' -- enforces ECMAScript 5, for JS to be better, e.g. throw exceptions.
+**'use strict' -- enforces ECMAScript 5, for JS to be better, e.g. throw exceptions.**
 
 The *const* keyword setups 'fs' to be a local variable with a constant value(the variable will not change)
 
@@ -75,18 +75,18 @@ We will add to the file watcher program
 
 'use strict';
 const fs = require('fs');
-const spawn = require('spawn');
+const spawn = require('child_process').spawn;
 const filename = process.argv[2];
 
 if (!filename) {
-  throw Error('You must specify a file, error, error!');
+    throw Error('You must specify a file, error, error!');
 }
 
 fs.watch(filename, () => {
-  const ls = spawn('ls', ['-l', '-h', filename]);
-  ls.stdout.pipe(process.stdout);
+    const ls = spawn('ls', ['-l', '-h', filename]);
+    ls.stdout.pipe(process.stdout);
 });
-console.log('Watching  ${filename} for changes');
+console.log(`Watching ${filename} for changes`);
 
 
 ```

@@ -4,11 +4,11 @@ const spawn = require('child_process').spawn;
 const filename = process.argv[2];
 
 if (!filename) {
-  throw Error('You must specify a file, error, error!');
+    throw Error('You must specify a file, error, error!');
 }
 
 fs.watch(filename, () => {
-  const ls = spawn('ls', ['-l', '-h', filename]);
-  ls.stdout.pipe(process.stdout);
+    const ls = spawn('ls', ['-l', '-h', filename]);
+    ls.stdout.pipe(process.stdout);
 });
 console.log(`Watching ${filename} for changes`);
