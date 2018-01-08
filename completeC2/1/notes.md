@@ -78,7 +78,7 @@ We're not printing user1 to the screen, but instead we're getUser for user2
 both of these events i.e. the calling of the functions. THese are note I/O intensive.
 
 ## using non blocking does not make I/O operations any faster, but it allows you to run
-more than one operation at the same time. 
+## more than one operation at the same time. 
 
 THe result of the non-blocking is much faster. In Blocking everything happens in order.
 
