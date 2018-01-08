@@ -127,7 +127,7 @@ if (!filemame) {
   }
 
 fs.watch(filename, () => {
-  const ls = spawn('ls', ['-l'], '-h', filename]);
+  const ls = spawn('ls', ['-l', '-h', filename]);
   ls.stdout.pipe(process.stdout);
 });
 console.log(`Watching ${filename} ...`); // notice the template string
