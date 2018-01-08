@@ -90,3 +90,47 @@ console.log(`Watching ${filename} for changes`);
 
 
 ```
+
+### Template Strings
+
+**We use backticks to mark the strings logged in the program**
+
+```JavaScript
+
+`File ${filename} changed!`
+
+```
+
+**This in the common vernacular are 'template' strings. Template strings can span multiple lines and support inerpolation**
+
+**Interpolation** -- Means you can place an expression inside of ${} and it will insert the **stringified** result. Just kind of like when you use JSON.strinfiy, but not really.
+
+**Unhandled exceptions will halt the process**
+
+### Processes
+
+Processes are important in Node. It will be expected of you to distribute processes in node to breakup work. This is better than putting everything in one bucket.(one node app).
+
+## Spawing a child process --
+
+The object will be to spawn a child process in response to change within the file being watched.
+
+```JavaScript
+
+'use strict'
+const fs = require('fs');
+const spawn = require('child_process').spawn;
+const filename = process.argv[2];
+
+if (!filemame) {
+  throw Error('You must specify a file ...');
+  }
+
+fs.watch(filename, () => {
+  const ls = spawn('ls', ['-l'], '-h', filename]);
+  ls.stdout.pipe(process.stdout);
+});
+console.log(`Watching ${filename} ...`); // notice the template string
+
+
+```
