@@ -134,3 +134,12 @@ console.log(`Watching ${filename} ...`); // notice the template string
 
 
 ```
+
+This is the shell output :
+
+```
+kermit@darwin 01 (develop) $ node watcher-spwn2.js hello.txt
+Watching hello.txt ...
+-rw-r--r-- 1 kermit dawrin 25 Jan  8 15:35 hello.txt
+
+```
