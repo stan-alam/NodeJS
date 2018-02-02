@@ -140,3 +140,15 @@
 <a>
   <img src="https://github.com/stan-alam/NodeJS/blob/develop/coreNode/06/svg_files/Notebook-37.svg" width="80%" height="80%">
 </a>
+
+<a>
+  <img src="https://github.com/stan-alam/NodeJS/blob/develop/coreNode/06/svg_files/Notebook-38.svg" width="80%" height="80%">
+</a>
+
+<a>
+  <img src="https://github.com/stan-alam/NodeJS/blob/develop/coreNode/06/svg_files/Notebook-39.svg" width="80%" height="80%">
+</a>
+
+<a>
+  <img src="https://github.com/stan-alam/NodeJS/blob/develop/coreNode/06/svg_files/Notebook-40.svg" width="80%" height="80%">
+</a>
