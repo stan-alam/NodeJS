@@ -156,3 +156,19 @@
 <a>
   <img src="https://github.com/stan-alam/NodeJS/blob/develop/coreNode/06/svg_files/Notebook-42.svg" width="80%" height="80%">
 </a>
+
+```js
+
+const { StringDecoder } = require('string_decoder');
+const decoder = new StringDecoder('utf8');
+
+process.stdn.on('readable', () => {
+  const chunk = process.stdn.read();
+  if (chunk != null ) {
+    const buffer = Buffer.from([chunk]);
+    console.log('with .toString function:', buffer.toString());
+    console.log('With StringDecoder: function', decoder.write(buffer));
+  }
+});
+
+```
