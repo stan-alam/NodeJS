@@ -172,3 +172,92 @@ process.stdn.on('readable', () => {
 });
 
 ```
+## Require() function and 'stuff' about modules
+
+<a>
+  <img src="https://github.com/stan-alam/NodeJS/blob/develop/coreNode/07/svg_files/Notebook-43.svg" width="80%" height="80%">
+</a>
+
+<a>
+  <img src="https://github.com/stan-alam/NodeJS/blob/develop/coreNode/06/svg_files/Notebook-44.svg" width="80%" height="80%">
+</a>
+
+```
+$ node
+> console.log(module);
+{ id: 'repl',
+  exports:
+   { writer: { [Function: inspect] colors: [Object], styles: [Object] },
+     _builtinLibs:
+      [ 'assert',
+        'buffer',
+        'child_process',
+        'cluster',
+        'crypto',
+        'dgram',
+        'dns',
+        'domain',
+        'events',
+        'fs',
+        'http',
+        'https',
+        'net',
+        'os',
+        'path',
+        'punycode',
+        'querystring',
+        'readline',
+        'stream',
+        'string_decoder',
+        'tls',
+        'tty',
+        'url',
+        'util',
+        'vm',
+        'zlib',
+        'smalloc' ],
+     REPLServer: { [Function: REPLServer] super_: [Object] },
+     start: [Function],
+     repl:
+      { _domain: [Object],
+        useGlobal: true,
+        ignoreUndefined: false,
+        rli: [Circular],
+        eval: [Object],
+        inputStream: [Object],
+        outputStream: [Object],
+        lines: [Object],
+        context: [Object],
+        _events: [Object],
+        bufferedCommand: '',
+        _sawReturn: true,
+        domain: null,
+        _maxListeners: undefined,
+        output: [Object],
+        input: [Object],
+        completer: [Function: complete],
+        _initialPrompt: '> ',
+        _prompt: '> ',
+        terminal: true,
+        line: '',
+        cursor: 0,
+        history: [Object],
+        historyIndex: -1,
+        commands: [Object],
+        writer: [Function],
+        useColors: true,
+        prevRows: 0 } },
+  parent: undefined,
+  filename: 'C:\\git\\NodeJS\\coreNode\\07\\repl',
+  loaded: false,
+  children: [],
+  paths:
+   [ 'C:\\git\\NodeJS\\coreNode\\07\\repl\\node_modules',
+     'C:\\git\\NodeJS\\coreNode\\07\\node_modules',
+     'C:\\git\\NodeJS\\coreNode\\node_modules',
+     'C:\\git\\NodeJS\\node_modules',
+     'C:\\git\\node_modules',
+     'C:\\node_modules' ] }
+undefined
+
+```
