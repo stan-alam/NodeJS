@@ -261,3 +261,6 @@ $ node
 undefined
 
 ```
+<a>
+  <img src="https://github.com/stan-alam/NodeJS/blob/develop/coreNode/07/svg_files/Notebook-45.svg" width="80%" height="80%">
+</a>
