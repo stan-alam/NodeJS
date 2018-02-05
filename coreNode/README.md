@@ -305,3 +305,18 @@ NODE_MODULE(NODE_GYP_MODULE_NAME, init)
 
 }  // namespace demo
 ```
+<a>
+  <img src="https://github.com/stan-alam/NodeJS/blob/develop/coreNode/08/svg_files/Notebook-47.svg" width="80%" height="80%">
+</a>
+
+```
+> require.extensions['.json'].toString()
+'function (module, filename) {\n  var content = fs.readFileSync(filename, \'utf8
+\');\n  try {\n    module.exports = JSON.parse(stripBOM(content));\n  } catch (e
+rr) {\n    err.message = filename + \': \' + err.message;\n    throw err;\n  }\n
+}'
+> require.extensions['.node'].toString()
+'function dlopen() { [native code] }'
+>
+
+```
