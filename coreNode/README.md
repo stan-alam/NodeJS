@@ -264,3 +264,42 @@ undefined
 <a>
   <img src="https://github.com/stan-alam/NodeJS/blob/develop/coreNode/07/svg_files/Notebook-45.svg" width="80%" height="80%">
 </a>
+
+## Addons
+
+<a>
+  <img src="https://github.com/stan-alam/NodeJS/blob/develop/coreNode/08/svg_files/Notebook-46.svg" width="80%" height="80%">
+</a>
+```javascript
+require.extensions
+{ '.js': [Function],
+  '.json': [Function],
+  '.node': [Function: dlopen] }
+```
+
+```cpp
+// hello.cc edited by Stan Alam taken from https://nodejs.org/api/addons.html
+#include <node.h>
+
+namespace demo {
+
+using v8::FunctionCallbackInfo;
+using v8::Isolate;
+using v8::Local;
+using v8::Object;
+using v8::String;
+using v8::Value;
+
+void Method(const FunctionCallbackInfo<Value>& args) {
+  Isolate* isolate = args.GetIsolate();
+  args.GetReturnValue().Set(String::NewFromUtf8(isolate, "Multiverse(s)"));
+}
+
+void init(Local<Object> exports) {
+  NODE_SET_METHOD(exports, "hello", Method);
+}
+
+NODE_MODULE(NODE_GYP_MODULE_NAME, init)
+
+}  // namespace demo
+```
