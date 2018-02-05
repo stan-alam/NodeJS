@@ -270,11 +270,13 @@ undefined
 <a>
   <img src="https://github.com/stan-alam/NodeJS/blob/develop/coreNode/08/svg_files/Notebook-46.svg" width="80%" height="80%">
 </a>
+
 ```javascript
 require.extensions
 { '.js': [Function],
   '.json': [Function],
   '.node': [Function: dlopen] }
+
 ```
 
 ```cpp
