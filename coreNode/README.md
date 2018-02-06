@@ -320,3 +320,8 @@ rr) {\n    err.message = filename + \': \' + err.message;\n    throw err;\n  }\n
 >
 
 ```
+## Wrapping, Caching modules
+
+<a>
+  <img src="https://github.com/stan-alam/NodeJS/blob/develop/coreNode/09/svg_files/Notebook-48.svg" width="80%" height="80%">
+</a>
