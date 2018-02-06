@@ -325,3 +325,15 @@ rr) {\n    err.message = filename + \': \' + err.message;\n    throw err;\n  }\n
 <a>
   <img src="https://github.com/stan-alam/NodeJS/blob/develop/coreNode/09/svg_files/Notebook-48.svg" width="80%" height="80%">
 </a>
+
+<a>
+  <img src="https://github.com/stan-alam/NodeJS/blob/develop/coreNode/09/svg_files/Notebook-49.svg" width="80%" height="80%">
+</a>
+
+```
+> require('module').wrapper
+[ '(function (exports, require, module, __filename, __dirname) { ',
+  '\n});' ]
+>
+
+```
