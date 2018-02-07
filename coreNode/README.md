@@ -345,3 +345,14 @@ rr) {\n    err.message = filename + \': \' + err.message;\n    throw err;\n  }\n
 <a>
   <img src="https://github.com/stan-alam/NodeJS/blob/develop/coreNode/09/svg_files/Notebook-50.svg" width="80%" height="80%">
 </a>
+
+```javascript
+
+const print = (stars, header) => {
+  console.log('*'.repeat(stars));
+  console.log(header);
+  console.log('*'.repeat(stars));
+};
+// node >= 8
+// or use harmony flag
+```
