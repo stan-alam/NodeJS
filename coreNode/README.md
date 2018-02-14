@@ -392,3 +392,5 @@ const print = (stars, header) => {
 <a>
   <img src="https://github.com/stan-alam/NodeJS/blob/develop/coreNode/10/svg_files/Notebook-66.svg" width="80%" height="80%">
 </a>
+
+# Concurrency Model and Event Loop
