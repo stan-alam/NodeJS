@@ -416,5 +416,5 @@ const print = (stars, header) => {
 </a>
 
 <a>
-  <img src="https://github.com/stan-alam/NodeJS/blob/develop/coreNode/10/13-14/svg_files/Notebook-73.svg" width="80%" height="80%">
+  <img src="https://github.com/stan-alam/NodeJS/blob/develop/coreNode/10/15-30/svg_files/Notebook-73.svg" width="80%" height="80%">
 </a>
