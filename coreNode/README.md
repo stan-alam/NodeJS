@@ -450,3 +450,26 @@ const print = (stars, header) => {
 <a>
   <img src="https://github.com/stan-alam/NodeJS/blob/develop/coreNode/10/15-30/svg_files/Notebook-81.svg" width="80%" height="80%">
 </a>
+
+<a>
+  <img src="https://github.com/stan-alam/NodeJS/blob/develop/coreNode/10/15-30/svg_files/Notebook-82.svg" width="80%" height="80%">
+</a>
+
+```js
+const fs = require('fs');
+
+fs.readFile(__filename, () => {
+  setTimeout() => {
+  console.log('execute timeout');
+  } 0); //set timeout is at 0 milliseconds
+  setImmediate(() => {
+    console.log('execute setImmediate');
+  });
+});
+/*
+$ node setImmediate.js
+execute setImmediate
+execute setTimeout
+$
+*/
+```
