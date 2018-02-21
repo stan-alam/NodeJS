@@ -473,3 +473,35 @@ execute setTimeout
 $
 */
 ```
+
+<a>
+  <img src="https://github.com/stan-alam/NodeJS/blob/develop/coreNode/10/15-30/svg_files/Notebook-83.svg" width="80%" height="80%">
+</a>
+
+```js
+
+const fs = require('fs');
+
+function fileSize (fileName, mycallBack) {
+  if (typeof fileName !== 'string') {
+    return mycallBack(new TypeError('argument should have been a string'));
+  }
+
+  fs.stat(fileName, (err, stats) => {
+    if(err) {
+      return mycallBack(err);
+    }
+
+    mycallBack(null, stats.size);
+  });
+}
+
+fileSize(__filename, (err, size) => {
+  if (err) throw err;
+
+  console.log(`Size in KB: ${size/1024}`);
+});
+
+console.log('Hello, Multiverse!');
+
+```
