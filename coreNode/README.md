@@ -505,3 +505,6 @@ fileSize(__filename, (err, size) => {
 console.log('Hello, Multiverse!');
 
 ```
+<a>
+  <img src="https://github.com/stan-alam/NodeJS/blob/develop/coreNode/10/15-30/svg_files/Notebook-84.svg" width="80%" height="80%">
+</a>
