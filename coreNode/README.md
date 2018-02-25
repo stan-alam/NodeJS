@@ -508,3 +508,36 @@ console.log('Hello, Multiverse!');
 <a>
   <img src="https://github.com/stan-alam/NodeJS/blob/develop/coreNode/10/15-30/svg_files/Notebook-84.svg" width="80%" height="80%">
 </a>
+
+<a>
+  <img src="https://github.com/stan-alam/NodeJS/blob/develop/coreNode/10/15-30/svg_files/Notebook-87.svg" width="80%" height="80%">
+</a>
+
+<a>
+  <img src="https://github.com/stan-alam/NodeJS/blob/develop/coreNode/10/15-30/svg_files/Notebook-88.svg" width="80%" height="80%">
+</a>
+
+```js
+
+const fs = require('fs');
+
+const readFileAsArray = function(file, callback) {
+    fs.readFile(file, function(err, data) {
+        if (err) {
+            return callback(error);
+        }
+
+        const lines = data.toString().trim().split('\n');
+        callback(null, lines);
+    });
+};
+
+readFileAsArray('./numbers', (err, lines) => {
+    if (err) throw err;
+
+    const numbers = lines.map(Number);
+    const oddNumbers = numbers.filter(number => number % 2 === 1);
+    console.log('odd number count is : ', oddNumbers.length);
+});
+
+```
