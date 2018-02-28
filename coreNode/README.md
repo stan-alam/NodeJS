@@ -541,3 +541,11 @@ readFileAsArray('./numbers', (err, lines) => {
 });
 
 ```
+
+<a>
+  <img src="https://github.com/stan-alam/NodeJS/blob/develop/coreNode/10/15-30/svg_files/Notebook-91.svg" width="80%" height="80%">
+</a>
+
+<a>
+  <img src="https://github.com/stan-alam/NodeJS/blob/develop/coreNode/10/15-30/svg_files/Notebook-92.svg" width="80%" height="80%">
+</a>
