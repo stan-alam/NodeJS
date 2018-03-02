@@ -549,3 +549,30 @@ readFileAsArray('./numbers', (err, lines) => {
 <a>
   <img src="https://github.com/stan-alam/NodeJS/blob/develop/coreNode/10/15-30/svg_files/Notebook-92.svg" width="80%" height="80%">
 </a>
+
+```js
+
+const fs = require('fs');
+
+const readFileAsArray = function(file) {
+  return new Promise((resolve, reject) => {
+    fs.readFile(file, function(err, data) {
+      if(err) {
+        return reject(err);
+      }
+
+      const lines = data.toString().trim().split('\n');
+      resolve(lines);
+    });
+  });
+};
+
+// here's where you make the call
+readFileAsArray('./numbers').then(lines => {
+  const numbers = lines.map(Number);
+  const oddNumbers = numbers.filter(number => number % 2 === 1);
+  console.log('odd numbers count:', oddNumbers.length);
+})
+.catch(console.error);
+
+```
