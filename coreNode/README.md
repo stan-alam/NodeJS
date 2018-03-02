@@ -616,3 +616,25 @@ readFileAsArray('./numbers').then(lines => {
 .catch(console.error);
 
 ```
+<a>
+  <img src="https://github.com/stan-alam/NodeJS/blob/develop/coreNode/10/15-30/svg_files/Notebook-96.svg" width="80%" height="80%">
+</a>
+
+```js
+
+async function countEven() {
+//  (%) is the modulus operator, it will let you have the remainder of place/sequence.length. taken from stackoverflow
+try {
+  const lines = await readFileAsArray('./numbers');
+  const numbers = lines.map(Number);
+  const evenCount = numbers.filter(number => number % 2 !== 1).length
+  console.log('even number count is : ', evenCount);
+} catch(err) {
+  console.error(err);
+}
+  }
+}
+
+countEven(); // wow! async code running synchronously ... good for test automation!
+
+```
