@@ -646,3 +646,26 @@ countEven(); // wow! async code running synchronously ... good for test automati
 <a>
   <img src="https://github.com/stan-alam/NodeJS/blob/develop/coreNode/10/15-30/svg_files/Notebook-99.svg" width="80%" height="80%">
 </a>
+
+```js
+//sync_event.js
+const EventEmitter = require('events');
+
+class Logger extends EventEmitter {
+  execute(theTask) {
+    console.log('State before execution');
+    this.emit('Begin');
+    theTask();
+    this.emit('fin');
+    console.log('State after execution');
+  }
+}
+
+const logger = new Logger();
+
+logger.on('begin', () => console.log('About to execute'));
+logger.on('end', () => console.log('Done with executing'));
+
+logger.execute(() => console.log('***** execute task ******* '));
+
+```
