@@ -669,3 +669,41 @@ logger.on('end', () => console.log('Done with executing'));
 logger.execute(() => console.log('***** execute task ******* '));
 
 ```
+### output
+
+```
+$ node sync_event.js
+State before execution
+***** execute task *******
+State after execution
+
+```
+**Notice that the execution of sync_event.js is synchronous.**
+
+```js
+
+//sync_event2.js
+const EventEmitter = require('events');
+
+class Logger extends EventEmitter {
+  execute(theTask) {
+    console.log('State before execution');
+    this.emit('Begin');
+    theTask();
+    this.emit('fin');
+    console.log('State after execution');
+  }
+}
+
+const logger = new Logger();
+
+logger.on('begin', () => console.log('About to execute'));
+logger.on('end', () => console.log('Done with executing'));
+
+logger.execute(() => setTimeout(
+  () => console.log('***** execute task ******* '),
+  1000
+  )
+);
+
+```
