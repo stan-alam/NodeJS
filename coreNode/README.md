@@ -669,7 +669,7 @@ logger.on('end', () => console.log('Done with executing'));
 logger.execute(() => console.log('***** execute task ******* '));
 
 ```
-### output
+### Shell Output
 
 ```
 $ node sync_event.js
@@ -739,7 +739,7 @@ elapsedTime.on('end', () => console.log('completed execution'));
 elapsedTime.execute(fs.readFile, __filename);
 
 ```
-Shell output 
+### Shell Output
 ```
 $ node async_event.js
 ready to exec
