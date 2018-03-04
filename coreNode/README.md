@@ -793,3 +793,38 @@ Length: 571
 execute: 3.550ms
 
 ```
+<a>
+  <img src="https://github.com/stan-alam/NodeJS/blob/develop/coreNode/10/15-30/svg_files/Notebook-103.svg" width="80%" height="80%">
+</a>
+
+```js
+
+const fs = require('fs');
+const EventEmitter = require('events');
+
+class ElapsedTime extends EventEmitter {
+execute(asyncFunc, ...args) {
+  console.time('execute');
+  this.emit('begin');
+  asyncFunc(...args, (err, data) => {
+    if(err) {
+      return this.emit('error', err);
+    }
+
+    this.emit('data', data);
+    console.timeEnd('execute');
+    this.emit('end');
+  });
+  }
+}
+
+const elapsedTime = new ElapsedTime();
+
+elapsedTime.on('data', (data) => {
+  console.log(`Length: ${data.length}`);
+});
+
+elapsedTime.execute(fs.readFile, ''); //notice blank in argument, will crash
+elapsedTime.execute(fs.readFile, __filename);
+
+```
