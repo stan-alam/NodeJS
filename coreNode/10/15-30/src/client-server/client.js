@@ -6,4 +6,8 @@ const rl = readline.createInterface({
 });
 
 //client event emmiter
-const client = new EventEmitter();
+const client = new EventEmitter(); //instantiate an object directly from EventEmitter
+const server = require('./server'); //import server object
+/* the client is going to emit events, while
+the server is going to listen to those _events
+*/
