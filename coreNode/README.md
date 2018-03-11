@@ -849,7 +849,7 @@ class Server extends EventEmitter {
   }
 }
 //created a function not just an object
-module.export = (client) => new Server(client); // Server(client) instantiate the server object with the client object
+module.exports = (client) => new Server(client); // Server(client) instantiate the server object with the client object
 //the function (client) is going to receive the client
 
 ```
@@ -888,7 +888,7 @@ const rl = readline.createInterface({
 
 //client event emmiter
 const client = new EventEmitter(); //instantiate an object directly from EventEmitter
-const server = require('./server')(client); //import server object
+const server = require('./server')(client); //import server object, also export a FUNCTION with the client as an arg
 /* the client is going to emit events, while
 the server is going to listen to those events
 */
@@ -896,5 +896,13 @@ the server is going to listen to those events
 rl.on('line', (input) => { //here register a listener for the line event, that receives an input
   console.log(input); //log the inpout line, to test the client
 });
+
+```
+
+```
+//output  
+$ node client.js
+yo
+yo
 
 ```
