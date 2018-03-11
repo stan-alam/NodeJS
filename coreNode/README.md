@@ -839,8 +839,8 @@ elapsedTime.execute(fs.readFile, __filename);
 <a>
   <img src="https://github.com/stan-alam/NodeJS/blob/develop/coreNode/10/15-30/svg_files/Notebook-106.svg" width="80%" height="80%">
 </a>
-**Server**
-```js
+
+```javascript
 const EventEmitter = require('events');
 
 class Server extends EventEmitter {
@@ -851,9 +851,10 @@ class Server extends EventEmitter {
 //created a function not just an object
 module.export = (client) => new Server(client); // Server(client) instantiate the server object with the client object
 //the function (client) is going to receive the client
+
 ```
-**Client**
-```js
+
+```javascript
 //client
 const EventEmitter = require('events');
 const readLine = require('readline');
@@ -872,4 +873,5 @@ the server is going to listen to those events
 rl.on('line', (input) => { //here register a listener for the line event, that receives an input
 
 });
+
 ```
