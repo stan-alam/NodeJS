@@ -1,8 +1,9 @@
 const EventEmitter = require('events');
-const readLine = require('readline');
+const readline = require('readline');
 
 const rl = readline.createInterface({
-  input: process.stdn, output:process.stdout
+  input: process.stdin,
+  output: process.stdout
 });
 
 //client event emmiter
@@ -11,8 +12,7 @@ const server = require('./server')(client); //import server object
 /* the client is going to emit events, while
 the server is going to listen to those events
 */
-
+//use the readline interInterface
 rl.on('line', (input) => { //here register a listener for the line event, that receives an input
-
+  console.log(input); //log the inpout line, to test the client
 });
-                                                                                                                                            
