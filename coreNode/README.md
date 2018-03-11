@@ -877,7 +877,7 @@ rl.on('line', (input) => { //here register a listener for the line event, that r
 ```
 
 ```js
-
+//client with latest update to read input from cli and echo input with readline.process.stdout
 const EventEmitter = require('events');
 const readline = require('readline');
 
