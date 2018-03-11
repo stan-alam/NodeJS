@@ -839,3 +839,37 @@ elapsedTime.execute(fs.readFile, __filename);
 <a>
   <img src="https://github.com/stan-alam/NodeJS/blob/develop/coreNode/10/15-30/svg_files/Notebook-106.svg" width="80%" height="80%">
 </a>
+**Server**
+```js
+const EventEmitter = require('events');
+
+class Server extends EventEmitter {
+  constructor(client) { //define the constructor to receive the client *within the server class
+    super();  
+  }
+}
+//created a function not just an object
+module.export = (client) => new Server(client); // Server(client) instantiate the server object with the client object
+//the function (client) is going to receive the client
+```
+**Client**
+```js
+//client
+const EventEmitter = require('events');
+const readLine = require('readline');
+
+const rl = readline.createInterface({
+  input: process.stdn, output:process.stdout
+});
+
+//client event emmiter
+const client = new EventEmitter(); //instantiate an object directly from EventEmitter
+const server = require('./server')(client); //import server object
+/* the client is going to emit events, while
+the server is going to listen to those events
+*/
+
+rl.on('line', (input) => { //here register a listener for the line event, that receives an input
+
+});
+```
