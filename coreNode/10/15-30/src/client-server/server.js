@@ -9,7 +9,10 @@ class Server extends EventEmitter {
    This is the sequential order, so the handler of the reponse event is not being defined at execution time
    */
 
-    client.on('command', (command) => {
+   process.nextTick(() => {
+     this.emit('response', 'Welcome - type a command or enter help for list of valid command options');
+   });
+     client.on('command', (command) => {
       console.log(`Command: ${command}`);
       switch(command) {
         case 'help':
