@@ -14,5 +14,5 @@ the server is going to listen to those events
 */
 //use the readline interInterface
 rl.on('line', (input) => { //here register a listener for the line event, that receives an input
-  console.log(input); //log the inpout line, to test the client
-});
+  client.emit('command', input);  // now everytime the user presses ENTER,
+});  // the client is going to emit an input EVENT to the server
