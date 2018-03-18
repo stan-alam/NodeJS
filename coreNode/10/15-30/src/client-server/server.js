@@ -19,7 +19,7 @@ class Server extends EventEmitter {
                 case 'add':
                 case 'del':
                 case 'ls':
-                    this[command](); // no arguments
+                    this[command](); // no arguments, will instead process arguments on client side
                     break;
                 default: // case in which is unknown command
                     this.emit('response', 'unknown command:' + `${command}`);
