@@ -3,6 +3,7 @@ const EventEmitter = require('events');
 class Server extends EventEmitter {
   constructor(client) { //define the constructor to receive the client *within the server class
     super();
+    this.emit('response', 'Welcome -- enter a command or help for list of commands'); // THIS IS NOT WORKING!
     client.on('command', (command) => {
       console.log(`Command: ${command}`);
       switch(command) {
