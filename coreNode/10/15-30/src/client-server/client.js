@@ -13,7 +13,8 @@ const server = require('./server')(client); //import server object
 the server is going to listen to those events
 */
 server.on('response', (resp) => { //when the server emits a response event, the listener will access the response as a function
-  console.log(`Response: ${resp}`);
+  //console.log(`Response: ${resp}`);
+  process.stdout.write('\u001B[2J\u001B[0;0f'); //clear terminal
 });
 //use the readline interInterface
 rl.on('line', (input) => { //here register a listener for the line event, that receives an input
