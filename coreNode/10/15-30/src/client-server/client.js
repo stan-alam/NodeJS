@@ -15,6 +15,8 @@ the server is going to listen to those events
 server.on('response', (resp) => { //when the server emits a response event, the listener will access the response as a function
   //console.log(`Response: ${resp}`);
   process.stdout.write('\u001B[2J\u001B[0;0f'); //clear terminal
+  process.stdout.write(resp);
+  process.stdout.write('\n\>');
 });
 //use the readline interInterface
 rl.on('line', (input) => { //here register a listener for the line event, that receives an input
