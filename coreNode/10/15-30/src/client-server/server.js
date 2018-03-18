@@ -3,7 +3,12 @@ const EventEmitter = require('events');
 class Server extends EventEmitter {
   constructor(client) { //define the constructor to receive the client *within the server class
     super();
-    this.emit('response', 'Welcome -- enter a command or help for list of commands'); // THIS IS NOT WORKING!
+    //this.emit('response', 'Welcome -- enter a command or help for list of commands'); // THIS IS NOT WORKING!
+  /* this.emit does not work because it will be executed when
+  const server = require(./server)(client) in client.js will be executed
+   This is the sequential order, so the handler of the reponse event is not being defined at execution time
+   */
+
     client.on('command', (command) => {
       console.log(`Command: ${command}`);
       switch(command) {
