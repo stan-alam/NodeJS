@@ -12,14 +12,14 @@ class Server extends EventEmitter {
         process.nextTick(() => {
             this.emit('response', 'Welcome - type a command or enter help for list of valid command options');
         });
-        client.on('command', (command) => {
+        client.on('command', (command, args) => { //now server can accept a command and an array of arguments
             console.log(`Command: ${command}`);
             switch (command) {
                 case 'help':
                 case 'add':
                 case 'del':
                 case 'ls':
-                    this[command](); // no arguments, will instead process arguments on client side
+                    this[command](args); // NOW THE ARRAY OF ARGS CAN BE PASSED TO EVERY COMMAND TO BE EXECUTED.
                     break;
                 default: // case in which is unknown command
                     this.emit('response', 'unknown command:' + `${command}`);
@@ -32,7 +32,7 @@ class Server extends EventEmitter {
         add, del {id}, ls`);
     }
     add(args) {
-        this.emit('response', 'adding ...');
+        this.emit('response', args.join(' '));
     }
     del() {
         this.emit('response', 'deleting ...');

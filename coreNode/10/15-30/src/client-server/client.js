@@ -22,5 +22,5 @@ server.on('response', (resp) => { //when the server emits a response event, the 
 let command, args;
 rl.on('line', (input) => { //here register a listener for the line event, that receives an input
   [command, ...args] = input.split(' '); //split on space, the first "token" will be on command, the rest will be passed in the arguments(args)
-  client.emit('command', command, args; //pass both command and argument, it will be parsed at the first space after command
+  client.emit('command', command, args); //pass both command and argument, it will be parsed at the first space after command
 }); // the client is going to emit an input EVENT to the server
