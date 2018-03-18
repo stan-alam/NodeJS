@@ -962,7 +962,7 @@ rl.on('line', (input) => { //here register a listener for the line event, that r
 });  // the client is going to emit an input EVENT to the server
 
 ```
-### Server is able to take four commands and echo invalid commands**
+### Server is able to take four commands and echo invalid commands
 
 ```js
 //server is able to handle four commands, and update accordingly, also can handle invalid commands
