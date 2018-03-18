@@ -932,3 +932,83 @@ rl.on('line', (input) => { //here register a listener for the line event, that r
 ```
 
 **The idea is to enter a value such as 'help' which is the command value and the Server will read and respond accordingly.**
+
+```js
+// client is able to clear the terminal when a command is entered
+// client echos the command, and the correct command too. from the server
+const EventEmitter = require('events');
+const readline = require('readline');
+
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout
+});
+
+//client event emmiter
+const client = new EventEmitter(); //instantiate an object directly from EventEmitter
+const server = require('./server')(client); //import server object
+/* the client is going to emit events, while
+the server is going to listen to those events
+*/
+server.on('response', (resp) => { //when the server emits a response event, the listener will access the response as a function
+  //console.log(`Response: ${resp}`);
+  process.stdout.write('\u001B[2J\u001B[0;0f'); //clear terminal
+  process.stdout.write(resp);
+  process.stdout.write('\n\>');
+});
+//use the readline interInterface
+rl.on('line', (input) => { //here register a listener for the line event, that receives an input
+  client.emit('command', input);  // now everytime the user presses ENTER,
+});  // the client is going to emit an input EVENT to the server
+
+```
+### Server is able to take four commands and echo invalid commands**
+
+```js
+//server is able to handle four commands, and update accordingly, also can handle invalid commands
+const EventEmitter = require('events');
+
+class Server extends EventEmitter {
+  constructor(client) { //define the constructor to receive the client *within the server class
+    super();
+    client.on('command', (command) => {
+      console.log(`Command: ${command}`);
+      switch(command) {
+        case 'help':
+        case 'add':
+        case 'del':
+        case 'ls':
+        this[command]();
+        break;
+      default: // case in which is unknown command
+        this.emit('response', 'unknown command:' + `${command}`);
+      }
+      // help, add, del, ls
+    });
+  }
+    help() { //create an instance method for each command
+      this.emit('response', 'help is on the way ...');
+    }
+    add() {
+      this.emit('response', 'adding ...');
+      }
+   del() {
+     this.emit('response', 'deleting ...');
+   }
+   ls(){
+     this.emit('response', 'ls-Ing...');
+   }
+}
+//created a function not just an object
+module.exports = (client) => new Server(client); // Server(client) instantiate the server object with the client object
+//the function (client) is going to receive the client
+
+```
+
+```text  
+//terminal output
+$ node client.js
+help is on the way ...
+>
+
+```
