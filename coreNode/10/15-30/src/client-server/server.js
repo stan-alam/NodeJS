@@ -8,8 +8,8 @@ class Server extends EventEmitter {
         const server = require(./server)(client) in client.js will be executed
          This is the sequential order, so the handler of the reponse event is not being defined at execution time
          */
-        this.tasks = {};
-        this.taskId = 1;
+        this.tasks = {}; //task object to hold task info
+        this.taskId = 1; //task Id to keep track of number tasks starting at 1, counter holder for new tasks
         process.nextTick(() => {
             this.emit('response', 'Welcome - type a command or enter help for list of valid command options');
         });
@@ -33,8 +33,8 @@ class Server extends EventEmitter {
         add, del {id}, ls`);
     }
     add(args) {
-        this.emit('response', args.join(' '));
-        this.emit('response', `Added task ${this.taskId}`);
+        this.tasks[this.taskId] = args.join(' '));  // each task is now added to task object
+        this.emit('response', `Added task ${this.taskId}`); //emit the number of the task to user
         this.taskId++;
     }
     del() {
