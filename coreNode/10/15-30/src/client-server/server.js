@@ -33,7 +33,7 @@ class Server extends EventEmitter {
         add, del {id}, ls`);
     }
     add(args) {
-        this.tasks[this.taskId] = args.join(' '));  // each task is now added to task object
+        this.tasks[this.taskId] = args.join(' ');  // each task is now added to task object
         this.emit('response', `Added task ${this.taskId}`); //emit the number of the task to user
         this.taskId++;
     }
