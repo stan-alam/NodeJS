@@ -19,7 +19,7 @@ class Server extends EventEmitter {
                 case 'add':
                 case 'del':
                 case 'ls':
-                    this[command]();
+                    this[command](); // no arguments
                     break;
                 default: // case in which is unknown command
                     this.emit('response', 'unknown command:' + `${command}`);
@@ -28,9 +28,10 @@ class Server extends EventEmitter {
         });
     }
     help() { //create an instance method for each command
-        this.emit('response', 'help is on the way ...');
+        this.emit('response', `Available commands:
+        add, del {id}, ls`);
     }
-    add() {
+    add(args) {
         this.emit('response', 'adding ...');
     }
     del() {
