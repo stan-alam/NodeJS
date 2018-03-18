@@ -5,10 +5,20 @@ class Server extends EventEmitter {
     super();
     client.on('command', (command) => {
       console.log(`Command: ${command}`);
+      switch(command) {
+        case 'help':
+        case 'add':
+        case 'del':
+        case 'ls':
+        this[command]();
+        break;
+      default: // case in which is unknown command
+        this.emit('response', 'unknown command:' + `${command}`);
+      }
       // help, add, del, ls
     });
   }
-    help() {
+    help() { //create an instance method for each command
       this.emit('response', 'help is on the way ...');
     }
     add() {
