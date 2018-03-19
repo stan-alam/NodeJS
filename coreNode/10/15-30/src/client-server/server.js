@@ -23,7 +23,7 @@ class Server extends EventEmitter {
                     this[command](args); // NOW THE ARRAY OF ARGS CAN BE PASSED TO EVERY COMMAND TO BE EXECUTED.
                     break;
                 default: // case in which is unknown command
-                    this.emit('response', 'unknown command:' + `${command}`);
+                    this.emit('response', 'unknown command: ' + `${command}`);
             }
             // help, add, del, ls
         });
@@ -38,7 +38,8 @@ class Server extends EventEmitter {
         this.taskId++;
     }
     del() {
-        this.emit('response', 'deleting ...');
+       delete(this.tasks[args[0]]); //for deleting the task, delete the id indicated by user
+       this.emit('response', `Deleting task ${args[0]}`); //print to console task has been deleted
     }
     ls() {
         this.emit('response', 'ls-Ing...');
