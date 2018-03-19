@@ -18,8 +18,8 @@ class Server extends EventEmitter {
             switch (command) {
                 case 'help':
                 case 'add':
-                case 'del':
                 case 'ls':
+                case 'del':
                     this[command](args); // NOW THE ARRAY OF ARGS CAN BE PASSED TO EVERY COMMAND TO BE EXECUTED.
                     break;
                 default: // case in which is unknown command
