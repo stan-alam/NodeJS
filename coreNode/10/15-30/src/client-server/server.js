@@ -28,6 +28,13 @@ class Server extends EventEmitter {
             // help, add, del, ls
         });
     }
+
+    tasksString() {
+      return Object.keys(this.tasks).map(key => { //loop over key, return task, for every key return string to ls
+        return `${key}: ${this.tasks[key]}`;
+      }).join('\n');
+    }
+
     help() { //create an instance method for each command
         this.emit('response', `Available commands:
         add, del {id}, ls`);
@@ -42,7 +49,7 @@ class Server extends EventEmitter {
        this.emit('response', `Deleting task ${args[0]}`); //print to console task has been deleted
     }
     ls() {
-        this.emit('response', 'ls-Ing...');
+        this.emit('response', `List of Tasks\n${this.tasksString()}`);
     }
 }
 //created a function not just an object
