@@ -1106,3 +1106,21 @@ rl.on('line', (input) => { //here register a listener for the line event, that r
   client.emit('command', command, args); //pass both command and argument, it will be parsed at the first space after command
 }); // the client is going to emit an input EVENT to the server
 ```
+## Node Networking
+
+<a>
+  <img src="https://github.com/stan-alam/NodeJS/blob/develop/coreNode/10/15-30/svg_files/Notebook-7.svg" width="80%" height="80%">
+</a>
+
+```js
+process.stdout.write('\u001B[2J\u001B[0;0f]'); //again clear node terminal
+
+const server = require('net').createServer(); // here use the createServer method from net module
+
+server.on('connection', socket => {
+  console.log('Client is connected!');
+  socket.write('Welcome!');
+});
+
+server.listen(3000, () => console.log('I am Server'));
+```
