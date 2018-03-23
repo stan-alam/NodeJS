@@ -18,6 +18,7 @@ server.on('connection', socket => {
   });
 
   socket.on('end', () => {
+    delete sockets[socket.id];
     console.log('Client is now disconnected');
   });
 });
