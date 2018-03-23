@@ -11,7 +11,9 @@ server.on('connection', socket => {
   socket.write('Welcome!\n');
 
   socket.on('data', data => {
-   Object.entries(sockets).forEach(([, cs])) => {  //the empty value would be key, but there is none
+   Object.entries(sockets).forEach(([key, cs])) => {  //the empty value would be key, but there is none
+    if (socket.id == key)
+      return;
     cs.write(`${socket.id}: `);
   //  console.log('data is', data);
     cs.write(data);
