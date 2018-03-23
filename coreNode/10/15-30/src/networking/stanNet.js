@@ -3,6 +3,11 @@
         let counter = 0;
         let sockets = {};
 
+        function timeStamp() {
+          const now = new Data();
+          return `${now.getHours()}:${now.getMinutes()}`;
+        }
+
         server.on('connection', socket => {
           socket.id = counter++; //everytime a client connects assign an id, and add to the counter for next socket Id
 
@@ -21,7 +26,7 @@
            Object.entries(sockets).forEach(([key, cs]) => {
             if (socket.id == key)
               return;
-            cs.write(`${socket.name}: `);
+            cs.write(`${socket.name}: ${timeStamp()}: `);
           //  console.log('data is', data);
             cs.write(data);
           });
