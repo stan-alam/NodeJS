@@ -1,30 +1,36 @@
-process.stdout.write('\u001B[2J\u001B[0;0f'); //again clear node terminal
-const server = require('net').createServer(); // here use the createServer method from net module
-let counter = 0;
-let sockets = {};
+        process.stdout.write('\u001B[2J\u001B[0;0f'); //again clear node terminal
+        const server = require('net').createServer(); // here use the createServer method from net module
+        let counter = 0;
+        let sockets = {};
 
-server.on('connection', socket => {
-  socket.id = counter++; //everytime a client connects assign an id, and add to the counter for next socket Id
-  sockets[sockets.id] = socket;
+        server.on('connection', socket => {
+          socket.id = counter++; //everytime a client connects assign an id, and add to the counter for next socket Id
 
-  console.log('Client is connected!');
-  socket.write('Welcome!\n');
+          //sockets[sockets.id] = socket;
 
-  socket.on('data', data => {
-   Object.entries(sockets).forEach(([key, cs])) => {  //the empty value would be key, but there is none
-    if (socket.id == key)
-      return;
-    cs.write(`${socket.id}: `);
-  //  console.log('data is', data);
-    cs.write(data);
-  });
+          console.log('Client is connected!');
+          socket.write('Hi, your name?\n');
 
-  socket.on('end', () => {
-    delete sockets[socket.id];
-    console.log('Client is now disconnected');
-  });
-});
+          socket.on('data', data => {
+            if(!socket[socket.id]) {
+              socket.name = data.toString().trim();
+              socket.write(`Welcome ... $[socket.name}!\n`);
+              sockets[socket.id] = socket;
+              return;
+            }
+           Object.entries(sockets).forEach(([key, cs]) => {
+            if (socket.id == key)
+              return;
+            cs.write(`${socket.name}: `);
+          //  console.log('data is', data);
+            cs.write(data);
+          });
+        });
 
-server.listen(3000, () => console.log('I am Server'));
-// use tmux to connect with multiple clients -- i.e. fingers should
-//never leave the keyboard!
+          socket.on('end', () => {
+            delete sockets[socket.id];
+            console.log('Client is now disconnected');
+          });
+        });
+
+        server.listen(3000, () => console.log('I am Server'));
