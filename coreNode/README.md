@@ -1258,3 +1258,11 @@ server.listen(3000, () => console.log('I am Server'));
 // use tmux to connect with multiple clients -- i.e. fingers should
 //never leave the keyboard!
 ```
+
+<a>
+  <img src="https://github.com/stan-alam/NodeJS/blob/develop/coreNode/10/15-30/svg_files/Notebook-14.svg" width="80%" height="80%">
+</a>
+
+<a>
+  <img src="https://github.com/stan-alam/NodeJS/blob/develop/coreNode/10/15-30/svg_files/Notebook-15.svg" width="80%" height="80%">
+</a>
