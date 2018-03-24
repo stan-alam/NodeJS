@@ -1276,7 +1276,7 @@ const dgram = require('dgram');
 
 const server = dgram.createSocket('udp4');
 
-server.on('listening', () => console.log('UDP Server is listening on on p 3333')); // listening event
+server.on('listening', () => console.log('UDP Server is listening up and listening!')); // listening event
 
 server.on('message', (msg, rinfo) => { // register handle for message event, callback exposes message and -->
   console.log(`${rinfo.address}:${rinfo.port} - ${msg}`); // remote address and port
@@ -1299,7 +1299,7 @@ const HOST = '127.0.0.1'; //home
 //server
 const server = dgram.createSocket('udp4');
 
-server.on('listening', () => console.log('UDP Server is listening on on p 3333')); // listening event
+server.on('listening', () => console.log('UDP Server is listening up and listening!')); // listening event
 
 server.on('message', (msg, rinfo) => { // register handle for message event, callback exposes message and -->
   console.log(`${rinfo.address}:${rinfo.port} - ${msg}`); // remote address and port
@@ -1318,11 +1318,11 @@ setInterval(function () {
     console.log('message sent by UDP');
     client.close();
   });
-}, 1000); // 1 second interval 
+}, 1000); // 1 second interval
 ```
 ```
 $ node stanUDP.js
-UDP Server is listening on on p 3333
+UDP Server is up and listening!
 message sent by UDP
 127.0.0.1:61164 - Mozart is awesome!
 message sent by UDP
@@ -1331,4 +1331,54 @@ message sent by UDP
 127.0.0.1:52091 - Mozart is awesome!
 message sent by UDP
 127.0.0.1:52092 - Mozart is awesome!
+```
+
+### Here we're using sending a buffer instead of string
+
+```js
+const dgram = require('dgram');
+const PORT = 3333;
+const HOST = '127.0.0.1'; //home
+
+
+//server
+const server = dgram.createSocket('udp4');
+
+server.on('listening', () => console.log('UDP Server is up and listening! ')); // listening event
+
+server.on('message', (msg, rinfo) => { // register handle for message event, callback exposes message and -->
+  console.log(`${rinfo.address}:${rinfo.port} - ${msg}`); // remote address and port
+});
+
+
+server.bind(PORT, HOST);
+
+//clients
+setInterval(function () {
+  const client = dgram.createSocket('udp4');
+  const msg = Buffer.from('Mozart ROCKS!!!')
+
+  client.send(msg, 0, msg.length, PORT, HOST, (err) => {
+    if (err) throw err;
+
+    console.log('message sent by UDP');
+    client.close();
+  });
+}, 1000);
+```
+### Output is the same
+```
+$ node stanUDPbuff.js
+UDP Server is up and listening!
+message sent by UDP
+127.0.0.1:58048 - Mozart ROCKS!!!
+message sent by UDP
+127.0.0.1:58049 - Mozart ROCKS!!!
+message sent by UDP
+127.0.0.1:56642 - Mozart ROCKS!!!
+message sent by UDP
+127.0.0.1:56643 - Mozart ROCKS!!!
+message sent by UDP
+127.0.0.1:56644 - Mozart ROCKS!!!
+
 ```
