@@ -1383,6 +1383,8 @@ message sent by UDP
 
 ```
 
+### Here we specify an offset, you can even send an array of messages as 1st argument
+
 ```js
 
 const dgram = require('dgram');
@@ -1420,6 +1422,8 @@ setInterval(function () {
 }, 1000);
 
 ```
+
+
 ```
 
 UDP Server is up and listening!
