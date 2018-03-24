@@ -1287,6 +1287,9 @@ const HOST = '127.0.0.1'; //home
 server.bind(PORT, HOST);
 
 ```
+<a>
+  <img src="https://github.com/stan-alam/NodeJS/blob/develop/coreNode/10/15-30/svg_files/Notebook-17.svg" width="80%" height="80%">
+</a>
 
 ```js
 const dgram = require('dgram');
@@ -1315,11 +1318,8 @@ setInterval(function () {
     console.log('message sent by UDP');
     client.close();
   });
-}, 1000);
+}, 1000); // 1 second interval 
 ```
-
-
-
 ```
 $ node stanUDP.js
 UDP Server is listening on on p 3333
