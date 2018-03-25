@@ -1423,7 +1423,6 @@ setInterval(function () {
 
 ```
 
-
 ```
 
 UDP Server is up and listening!
@@ -1435,5 +1434,22 @@ message sent by UDP
 message sent by UDP
 127.0.0.1:51495 - Mozart
 127.0.0.1:51495 - ROCKS!
+
+```
+
+<a>
+  <img src="https://github.com/stan-alam/NodeJS/blob/develop/coreNode/10/15-30/svg_files/Notebook-18.svg" width="80%" height="80%">
+</a>
+
+```js
+
+const server = require('http').createServer();
+
+server.on('request', (req, res) => {
+  res.writeHead(200, { 'content-type': 'text/plain' });
+  res.end('Hola, Multiverse(s)!\n');
+});
+
+server.listen(8000);
 
 ```
