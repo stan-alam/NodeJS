@@ -1482,6 +1482,10 @@ server.listen(8000);
   <img src="https://github.com/stan-alam/NodeJS/blob/develop/coreNode/10/15-30/svg_files/Notebook-20.svg" width="80%" height="80%">
 </a>
 
+<a>
+  <img src="https://github.com/stan-alam/NodeJS/blob/develop/coreNode/10/15-30/svg_files/Notebook-21.svg" width="80%" height="80%">
+</a>
+
 ```js
 
 const fs = require('fs');
@@ -1503,9 +1507,5 @@ server.listen(443);
 ```
 
 <a>
-  <img src="https://github.com/stan-alam/NodeJS/blob/develop/coreNode/10/15-30/svg_files/Notebook-21.svg" width="80%" height="80%">
-</a>
-
-<a>
-  <img src="https://github.com/stan-alam/NodeJS/blob/master/coreNode/10/15-30/svg_files/nodeHTTP.svg" width="80%" height="80%">
+  <img src="https://github.com/stan-alam/NodeJS/blob/master/coreNode/10/15-30/svg_files/nodeHTTP.svg" width="60%" height="60%">
 </a>
