@@ -1457,3 +1457,24 @@ server.listen(8000);
 <a>
   <img src="https://github.com/stan-alam/NodeJS/blob/develop/coreNode/10/15-30/svg_files/Notebook-19.svg" width="80%" height="80%">
 </a>
+
+```js
+//stanHTTP_2.js
+const server = require('http').createServer();
+
+server.on('request', (req, res) => {
+  res.writeHead(200, { 'content-type': 'text/plain' });
+  res.write('Hola, Multiverse(s)!\n');
+
+setTimeout(function () {
+  res.write('Mozart rocks!\n');
+  }, 1000);
+
+setTimeout(function () {
+  res.write('Beethoven rules!\n');
+  }, 1000);
+});
+
+server.listen(8000);
+
+```
