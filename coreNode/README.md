@@ -1507,5 +1507,5 @@ server.listen(443);
 </a>
 
 <a>
-  <img src="https://github.com/stan-alam/NodeJS/blob/master/coreNode/10/15-30/svg_files/nodeHTTP.svg" width="100%" height="100%">
+  <img src="https://github.com/stan-alam/NodeJS/blob/master/coreNode/10/15-30/svg_files/nodeHTTP.svg" width="80%" height="80%">
 </a>
