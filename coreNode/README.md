@@ -1478,3 +1478,23 @@ setTimeout(function () {
 server.listen(8000);
 
 ```
+<a>
+  <img src="https://github.com/stan-alam/NodeJS/blob/develop/coreNode/10/15-30/svg_files/Notebook-20.svg" width="80%" height="80%">
+</a>
+
+```js
+//stanHTTPS.js
+const server = require('https')
+  .createServer({
+  key:
+  cert:
+});
+//use openssl toolkit
+server.on('request', (req, res) => {
+  res.writeHead(200, { 'content-type': 'text/plain' });
+  res.write('Hola, Multiverse(s)!\n');
+});
+
+server.listen(8000);
+
+```
