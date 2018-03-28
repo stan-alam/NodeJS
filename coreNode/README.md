@@ -1505,6 +1505,9 @@ server.listen(443);
 //openssl req -x509 -newkey rsa:4096 -keyout key.pem -out cert.pem -nodes
 
 ```
+<a>
+  <img src="https://github.com/stan-alam/NodeJS/blob/develop/coreNode/10/15-30/svg_files/Notebook-22.svg" width="80%" height="80%">
+</a>
 
 <a>
   <img src="https://github.com/stan-alam/NodeJS/blob/master/coreNode/10/15-30/svg_files/nodeHTTP.svg" width="60%" height="60%">
