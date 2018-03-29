@@ -1512,3 +1512,18 @@ server.listen(443);
 <a>
   <img src="https://github.com/stan-alam/NodeJS/blob/master/coreNode/10/15-30/svg_files/nodeHTTP.svg" width="60%" height="60%">
 </a>
+
+<a>
+  <img src="https://github.com/stan-alam/NodeJS/blob/develop/coreNode/10/15-30/svg_files/Notebook-23.svg" width="80%" height="80%">
+</a>
+
+```js
+
+const http = require('http');
+
+http.request({hostname: 'www.nannerl.io'},
+(res) => {
+  console.log(res);
+});
+
+```
