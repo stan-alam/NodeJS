@@ -2203,3 +2203,10 @@ Agent {
   maxFreeSockets: 256 }
 >
 ```
+<a>
+  <img src="https://github.com/stan-alam/NodeJS/blob/develop/coreNode/10/15-30/svg_files/Notebook-26.svg" width="80%" height="80%">
+</a>
+
+<a>
+  <img src="https://github.com/stan-alam/NodeJS/blob/develop/coreNode/10/15-30/svg_files/Notebook-27.svg" width="80%" height="80%">
+</a>
