@@ -2257,3 +2257,47 @@ $ curl localhost:8000/home
 </html>
 
 ```
+
+```js
+
+const fs = require('fs');
+const server = require('http').createServer();
+
+server.on('request', (req, res) => {
+  switch (req.url) {
+  case '/home':
+  case '/about':
+    res.writeHead(200, { 'Content-Type': 'text/html' });
+    res.end(fs.readFileSync(`.${req.url}.html`));
+    break;
+  case '/':
+
+    break;
+  default:
+
+  }
+});
+
+server.listen(8000);
+
+```
+
+
+```
+$ curl localhost:8000/about
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100   294    0   294    0     0    294      0 --:--:-- --:--:-- --:--:--  287k<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset ="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale-1.0">
+  <met http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>About</title>
+</head>
+<body>
+  Nannerl.io, by Stan Enterprises
+</body>
+</html>
+
+```
