@@ -2258,6 +2258,10 @@ $ curl localhost:8000/home
 
 ```
 
+<a>
+  <img src="https://github.com/stan-alam/NodeJS/blob/develop/coreNode/10/15-30/svg_files/Notebook-29.svg" width="80%" height="80%">
+</a>
+
 ```js
 
 const fs = require('fs');
@@ -2281,7 +2285,6 @@ server.on('request', (req, res) => {
 server.listen(8000);
 
 ```
-
 
 ```
 $ curl localhost:8000/about
