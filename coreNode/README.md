@@ -2211,6 +2211,12 @@ Agent {
   <img src="https://github.com/stan-alam/NodeJS/blob/develop/coreNode/10/15-30/svg_files/Notebook-27.svg" width="80%" height="80%">
 </a>
 
+## Routes in Node
+
+<a>
+  <img src="https://github.com/stan-alam/NodeJS/blob/develop/coreNode/10/15-30/svg_files/Notebook-28.svg" width="80%" height="80%">
+</a>
+
 ```js
 
 const fs = require('fs');
