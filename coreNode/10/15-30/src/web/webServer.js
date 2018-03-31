@@ -5,8 +5,14 @@ server.on('request', (req, res) => {
   switch (req.url) {
   case '/home':
     res.writeHead(200, { 'Content-Type': 'text/html' });
-    res.end(fs.readFileSync(''));
+    res.end(fs.readFileSync('./home.html'));
+    break;
+  case '/':
+
+    break;
+  default:
+
   }
-})
+});
 
 server.listen(8000);
