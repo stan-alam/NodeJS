@@ -2457,7 +2457,7 @@ Transfer-Encoding: chunked
 
 ```
 ## This diagram is from the NODE.org api page for the URL module
-**parsing the following url_http://user:pass@sub.host.com:8080/p/a/t/h?query=string#hash**
+**parsing the following url: http://user:pass@sub.host.com:8080/p/a/t/h?query=string#hash**
 ```
 ┌─────────────────────────────────────────────────────────────────────────────────────────────┐
 │                                            href                                             │
