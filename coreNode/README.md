@@ -2456,6 +2456,8 @@ Connection: keep-alive
 Transfer-Encoding: chunked
 
 ```
+## This diagram is from the NODE.org api page for the URL module
+**parsing the following url_http://user:pass@sub.host.com:8080/p/a/t/h?query=string#hash**
 ```
 ┌─────────────────────────────────────────────────────────────────────────────────────────────┐
 │                                            href                                             │
@@ -2477,3 +2479,6 @@ Transfer-Encoding: chunked
 (all spaces in the "" line should be ignored -- they are purely for formatting)
 
 ```
+<a>
+  <img src="https://github.com/stan-alam/NodeJS/blob/develop/coreNode/10/15-30/svg_files/Notebook-32.svg" width="80%" height="80%">
+</a>
