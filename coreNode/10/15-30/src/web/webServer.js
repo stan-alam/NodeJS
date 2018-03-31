@@ -9,7 +9,8 @@ server.on('request', (req, res) => {
     res.end(fs.readFileSync(`.${req.url}.html`));
     break;
   case '/':
-
+    res.writeHead(301, { 'Location': '/home' });
+    res.end();
     break;
   default:
 

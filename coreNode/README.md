@@ -2304,3 +2304,41 @@ $ curl localhost:8000/about
 </html>
 
 ```
+<a>
+  <img src="https://github.com/stan-alam/NodeJS/blob/develop/coreNode/10/15-30/svg_files/Notebook-30.svg" width="80%" height="80%">
+</a>
+
+```js
+const fs = require('fs');
+const server = require('http').createServer();
+
+server.on('request', (req, res) => {
+  switch (req.url) {
+  case '/home':
+  case '/about':
+    res.writeHead(200, { 'Content-Type': 'text/html' });
+    res.end(fs.readFileSync(`.${req.url}.html`));
+    break;
+  case '/':
+    res.writeHead(301, { 'Location': '/home' });
+    res.end();
+    break;
+  default:
+
+  }
+});
+
+server.listen(8000);
+
+```
+
+```
+$ curl -i localhost:8000/
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0HTTP/1.1 301 Moved Permanently
+Location: /home
+Date: Sat, 31 Mar 2018 18:45:03 GMT
+Connection: keep-alive
+Transfer-Encoding: chunked
+```
