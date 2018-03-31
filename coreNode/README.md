@@ -2239,6 +2239,7 @@ server.on('request', (req, res) => {
 server.listen(8000);
 
 ```
+```
 $ curl localhost:8000/home
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
