@@ -2571,3 +2571,75 @@ fs.watch(dirname, (eventType, filename) => {
 });
 
 ```
+
+<a>
+  <img src="https://github.com/stan-alam/NodeJS/blob/develop/coreNode/10/15-30/svg_files/Notebook-42.svg" width="80%" height="80%">
+</a>
+
+<a>
+  <img src="https://github.com/stan-alam/NodeJS/blob/develop/coreNode/10/15-30/svg_files/Notebook-43.svg" width="80%" height="80%">
+</a>
+
+<a>
+  <img src="https://github.com/stan-alam/NodeJS/blob/develop/coreNode/10/15-30/svg_files/Notebook-44.svg" width="80%" height="80%">
+</a>
+
+## > console
+
+```
+> console
+Console {
+  log: [Function: bound consoleCall],
+  info: [Function: bound consoleCall],
+  warn: [Function: bound consoleCall],
+  error: [Function: bound consoleCall],
+  dir: [Function: bound consoleCall],
+  time: [Function: bound consoleCall],
+  timeEnd: [Function: bound consoleCall],
+  trace: [Function: bound consoleCall],
+  assert: [Function: bound consoleCall],
+  clear: [Function: bound consoleCall],
+  count: [Function: bound consoleCall],
+  countReset: [Function: bound countReset],
+  group: [Function: bound consoleCall],
+  groupCollapsed: [Function: bound consoleCall],
+  groupEnd: [Function: bound consoleCall],
+  Console: [Function: Console],
+  debug: [Function: debug],
+  dirxml: [Function: dirxml],
+  table: [Function: table],
+  markTimeline: [Function: markTimeline],
+  profile: [Function: profile],
+  profileEnd: [Function: profileEnd],
+  timeline: [Function: timeline],
+  timelineEnd: [Function: timelineEnd],
+  timeStamp: [Function: timeStamp],
+  context: [Function: context],
+  [Symbol(counts)]: Map {} }
+>
+
+```
+
+## > assert
+
+```
+$ node
+> assert
+{ [Function: ok]
+  fail: [Function: fail],
+  AssertionError: [Function: AssertionError],
+  ok: [Circular],
+  equal: [Function: equal],
+  notEqual: [Function: notEqual],
+  deepEqual: [Function: deepEqual],
+  deepStrictEqual: [Function: deepStrictEqual],
+  notDeepEqual: [Function: notDeepEqual],
+  notDeepStrictEqual: [Function: notDeepStrictEqual],
+  strictEqual: [Function: strictEqual],
+  notStrictEqual: [Function: notStrictEqual],
+  throws: [Function: throws],
+  doesNotThrow: [Function: doesNotThrow],
+  ifError: [Function: ifError] }
+>
+
+```
