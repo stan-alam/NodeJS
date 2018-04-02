@@ -2651,3 +2651,36 @@ $ node
 <a>
   <img src="https://github.com/stan-alam/NodeJS/blob/develop/coreNode/10/40-50/svg_files/Notebook-0.svg" width="80%" height="80%">
 </a>
+
+```js
+function negativeSummation(...args) {
+  return args.reduce((arg, total) => {
+    return total-arg;
+  }, 0);
+}
+
+console.log((negativeSummation, 1, 3, 11));
+//this is not working? So lets use the debugger to
+//step through the code!
+
+```
+<a>
+  <img src="https://github.com/stan-alam/NodeJS/blob/develop/coreNode/10/40-50/svg_files/Notebook-1.svg" width="80%" height="80%">
+</a>
+
+```
+
+$ node debug negativeSummation.js
+(node:18124) [DEP0068] DeprecationWarning: `node debug` is deprecated. Please us
+e `node inspect` instead.
+< Debugger listening on ws://127.0.0.1:9229/14f57090-774a-40b4-820a-9a83cd90e7b3
+
+< For help see https://nodejs.org/en/docs/inspector
+Break on start in negativeSummation.js:1
+> 1 (function (exports, require, module, __filename, __dirname) { function negat
+iveSummation(...args) {
+  2   return args.reduce((arg, total) => {
+  3     return total-arg;
+debug>
+
+```
