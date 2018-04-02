@@ -2684,3 +2684,24 @@ iveSummation(...args) {
 debug>
 
 ```
+<a>
+  <img src="https://github.com/stan-alam/NodeJS/blob/develop/coreNode/10/40-50/svg_files/Notebook-2.svg" width="80%" height="80%">
+</a>
+
+<a>
+  <img src="https://github.com/stan-alam/NodeJS/blob/develop/coreNode/10/40-50/svg_files/Notebook-3.svg" width="80%" height="80%">
+</a>
+
+```js
+
+const fs = require('fs');
+const server = require('http').createServer();
+
+server.on('request', (req, res) => {
+  const src = fs.createReadStream('./giganticFile.txt');
+  src.pipe(res); //here wer'e piping the contents of the file to the res obj
+});
+
+server.listen(8888);
+
+```
