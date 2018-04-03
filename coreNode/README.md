@@ -2705,3 +2705,8 @@ server.on('request', (req, res) => {
 server.listen(8888);
 
 ```
+## Four Types of Streams in Node
+
+<a>
+  <img src="https://github.com/stan-alam/NodeJS/blob/develop/coreNode/10/40-50/svg_files/typeOfStreams.svg" width="80%" height="80%">
+</a>
