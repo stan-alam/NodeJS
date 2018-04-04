@@ -2726,3 +2726,69 @@ server.listen(8888);
 <a>
   <img src="https://github.com/stan-alam/NodeJS/blob/develop/coreNode/10/40-50/svg_files/Notebook-7.svg" width="80%" height="80%">
 </a>
+
+```js
+//readStream2.js
+const { Readable } = require('stream'); // implement a readable stream, require a READABLE interface, and construct an object
+
+const streamIn = new Readable({
+  read(size) {
+    setTimeout(() => {
+      if(this.currentCharCode > 90){ //stop at letter z
+        this.push(null);
+        return;
+      }
+      this.push(String.fromCharCode(this.currentCharCode++));
+  }, 100);
+ }
+});
+
+streamIn.currentCharCode = 65;
+streamIn.pipe(process.stdout);
+
+```
+
+```js
+//writeStream.js
+const { Writable } = require('stream');
+
+const streamOut = new Writable({
+  write(chunk, encoding, callback) {
+  console.log(chunk.toString());
+  callback();
+  }
+});
+
+// basically anything this receives will echo right back.
+process.stdin.pipe(streamOut); // piping stdin which is a readable stream into streamOut
+
+```
+
+**At bash, type node readStream3.js | head -c3**
+
+```js
+//readStream3.js
+//run this on linux
+const { Readable } = require('stream'); // implement a readable stream, require a READABLE interface, and construct an object
+
+const streamIn = new Readable({
+  read(size) {
+    setTimeout(() => {
+      if(this.currentCharCode > 90){ //stop at letter z
+        this.push(null);
+        return;
+      }
+      this.push(String.fromCharCode(this.currentCharCode++));
+  }, 100);
+ }
+});
+
+streamIn.currentCharCode = 65;
+streamIn.pipe(process.stdout);
+
+process.on('exit', () => {
+  console.error(`\n\ncurrentCharCode : ${streamIn.currentCharCode}`);
+});
+//stdout is not a tty got this on git-bash for win
+
+```
