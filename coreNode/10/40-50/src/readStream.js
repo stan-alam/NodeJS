@@ -12,9 +12,8 @@ const { Readable } = require('stream'); // implement a readable stream, require 
 
 const streamIn = new Readable({
   read(size) {
-    setTimeout(1000);
     this.push(String.fromCharCode(this.currentCharCode++));
-    if(this.currentCharCode > 90){
+    if(this.currentCharCode > 90){ //stop at letter z
       this.push(null);
     }
   }
