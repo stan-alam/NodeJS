@@ -2708,7 +2708,7 @@ server.listen(8888);
 ## Four Types of Streams in Node
 
 <a>
-  <img src="https://github.com/stan-alam/NodeJS/blob/develop/coreNode/10/40-50/svg_files/typeOfStreams.svg" width="80%" height="80%">
+  <img src="https://github.com/stan-alam/NodeJS/blob/develop/coreNode/10/40-50/svg_files/typeOfStreams.svg" width="50%" height="50%">
 </a>
 
 <a>
@@ -2793,3 +2793,11 @@ process.on('exit', () => {
 process.stdout.on('error', process.exit); //register an error on stdout, and call process.exit when error occurs
 
 ```
+
+<a>
+  <img src="https://github.com/stan-alam/NodeJS/blob/develop/coreNode/10/40-50/svg_files/Notebook-8.svg" width="80%" height="80%">
+</a>
+
+<a>
+  <img src="https://github.com/stan-alam/NodeJS/blob/develop/coreNode/10/40-50/svg_files/Notebook-9.svg" width="80%" height="80%">
+</a>
