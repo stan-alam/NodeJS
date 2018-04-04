@@ -19,3 +19,4 @@ process.on('exit', () => {
   console.error(`\n\ncurrentCharCode : ${streamIn.currentCharCode}`);
 });
 //stdout is not a tty got this on git-bash for win
+process.stdout.on('error', process.exit);
