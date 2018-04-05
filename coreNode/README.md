@@ -2827,3 +2827,31 @@ $ node stanZip2.js tux.txt
 ☻☻Completed
 
 ```
+<a>
+  <img src="https://github.com/stan-alam/NodeJS/blob/develop/coreNode/10/40-50/svg_files/Notebook-11.svg" width="80%" height="80%">
+</a>
+
+```js
+//stanZip3.js
+const fs = require('fs');
+const zlib = require('zlib');
+const file = process.argv[2];
+const crypto = require('crypto');
+
+const { Transform } = require('stream');
+
+const progress = new Transform({
+  transform(chunk, encoding, callback) {
+    process.stdout.write('☻');
+    callback(null, chunk);
+  }
+});
+
+fs.createReadStream(file)
+  .pipe(zlib.createGzip())
+  .pipe(crypto.createCipher('aes192', 'a_secret'))
+  .pipe(progress)
+  .pipe(fs.createWriteStream(file + '.zz'))
+  .on('finish', () => console.log('Completed'));
+
+```  
