@@ -2801,3 +2801,29 @@ process.stdout.on('error', process.exit); //register an error on stdout, and cal
 <a>
   <img src="https://github.com/stan-alam/NodeJS/blob/develop/coreNode/10/40-50/svg_files/Notebook-9.svg" width="80%" height="80%">
 </a>
+
+<a>
+  <img src="https://github.com/stan-alam/NodeJS/blob/develop/coreNode/10/40-50/svg_files/Notebook-10.svg" width="80%" height="80%">
+</a>
+
+```js
+//stanZip2.js
+const fs = require('fs');
+const zlib = require('zlib');
+const file = process.argv[2];
+
+fs.createReadStream(file)
+  .pipe(zlib.createGzip())
+  .on('data', () => process.stdout.write('☻'))  //listening to data and update progress bar
+  .pipe(fs.createWriteStream(file + '.gz'))
+  .on('finish', () => console.log('Completed'));
+
+```
+
+**console output**
+
+```
+$ node stanZip2.js tux.txt
+☻☻Completed
+
+```
