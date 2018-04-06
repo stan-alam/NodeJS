@@ -2250,3 +2250,18 @@ fs.createReadStream(file)
 <a>
   <img src="https://github.com/stan-alam/NodeJS/blob/develop/coreNode/10/40-50/svg_files/childProcess.svg" width="50%" height="50%">
 </a>
+
+<a>
+  <img src="https://github.com/stan-alam/NodeJS/blob/develop/coreNode/10/40-50/svg_files/Notebook-15.svg" width="80%" height="80%">
+</a>
+
+```js
+//spawnList.js
+const { spawn } = require('child_process');
+const child = spawn('ls');
+
+child.on('exit', function (code, signal) {
+  console.log(`child process exited with code ${code}, ${signal}`)}); //here if the command fails, it will signal to Jenkins, and
+  //test will be marked as failed.
+
+```
