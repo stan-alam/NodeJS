@@ -2269,3 +2269,38 @@ child.on('exit', function (code, signal) {
 <a>
   <img src="https://github.com/stan-alam/NodeJS/blob/develop/coreNode/10/40-50/svg_files/Notebook-16.svg" width="80%" height="80%">
 </a>
+
+<a>
+  <img src="https://github.com/stan-alam/NodeJS/blob/develop/coreNode/10/40-50/svg_files/Notebook-17.svg" width="80%" height="80%">
+</a>
+
+```js
+//spawnPipeWC.js
+const { spawn } = require('child_process');
+const child = spawn('wc');
+
+process.stdin.pipe(child.stdin);
+
+child.stdout.on('data', (data) => {
+  console.log(`child stdout:\n${data}`);
+});
+
+```
+
+<a>
+  <img src="https://github.com/stan-alam/NodeJS/blob/develop/coreNode/10/40-50/svg_files/Notebook-18.svg" width="80%" height="80%">
+</a>
+
+```js
+//spwnPipeFindWC.js
+const { spawn } = require('child_process');
+const find = spawn('find', ['.', '-type', 'f']);
+const wc = spawn('wc', ['-l']);
+
+process.stdin.pipe(wc.stdin);
+
+wc.stdout.on('data', (data) => {
+  console.log(`child stdout:\n${data}`);
+});
+
+```
