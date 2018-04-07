@@ -2265,3 +2265,7 @@ child.on('exit', function (code, signal) {
   //test will be marked as failed.
 
 ```
+
+<a>
+  <img src="https://github.com/stan-alam/NodeJS/blob/develop/coreNode/10/40-50/svg_files/Notebook-16.svg" width="80%" height="80%">
+</a>
