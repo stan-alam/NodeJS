@@ -2304,3 +2304,16 @@ wc.stdout.on('data', (data) => {
 });
 
 ```
+
+<a>
+  <img src="https://github.com/stan-alam/NodeJS/blob/develop/coreNode/10/40-50/svg_files/Notebook-19.svg" width="80%" height="80%">
+</a>
+
+```js
+//spawnFind.js
+const { spawn } = require('child_process');
+const child = spawn('find', ['.', '-type', 'f'], {
+  stdio: 'inherit'
+});
+
+```
