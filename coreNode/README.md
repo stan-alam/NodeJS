@@ -2366,3 +2366,70 @@ setInterval(() => {
 <a>
   <img src="https://github.com/stan-alam/NodeJS/blob/develop/coreNode/10/40-50/svg_files/Notebook-25.svg" width="80%" height="80%">
 </a>
+
+```js
+//httpServer.js
+const http = require('http');
+const pid = process.pid;
+
+http.createServer((req, res) => {
+  for (let i=0; i<1e7; i++); //to simulate CPU work
+  res.end(`Work handled by process ${pid}`);
+
+}).listen(8080, () => {
+  console.log(`Begining process start ${pid}`);
+});
+
+```
+
+## Apache AB on a Windows machine
+
+```
+C:\xampp\apache\bin>ab -c200 -t10 http://localhost:8080/
+This is ApacheBench, Version 2.3 <$Revision: 1807734 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking localhost (be patient)
+Finished 1442 requests
+
+
+Server Software:
+Server Hostname:        localhost
+Server Port:            8080
+
+Document Path:          /
+Document Length:        28 bytes
+
+Concurrency Level:      200
+Time taken for tests:   10.002 seconds
+Complete requests:      1442
+Failed requests:        0
+Total transferred:      148526 bytes
+HTML transferred:       40376 bytes
+Requests per second:    144.17 [#/sec] (mean)
+Time per request:       1387.246 [ms] (mean)
+Time per request:       6.936 [ms] (mean, across all concurrent requests)
+Transfer rate:          14.50 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    1  12.6      0     478
+Processing:  1100 1239 303.8   1133    2479
+Waiting:     1100 1239 303.8   1133    2479
+Total:       1100 1240 304.0   1133    2480
+
+Percentage of the requests served within a certain time (ms)
+  50%   1133
+  66%   1137
+  75%   1146
+  80%   1154
+  90%   1678
+  95%   2095
+  98%   2329
+  99%   2403
+ 100%   2480 (longest request)
+
+C:\xampp\apache\bin>
+
+```
