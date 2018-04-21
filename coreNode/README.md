@@ -2368,7 +2368,7 @@ setInterval(() => {
 </a>
 
 ```js
-//httpServer.js
+//HttpServer.js
 const http = require('http');
 const pid = process.pid;
 
@@ -2429,6 +2429,75 @@ Percentage of the requests served within a certain time (ms)
   98%   2329
   99%   2403
  100%   2480 (longest request)
+
+C:\xampp\apache\bin>
+
+```
+<a>
+  <img src="https://github.com/stan-alam/NodeJS/blob/develop/coreNode/10/40-50/svg_files/Notebook-26.svg" width="80%" height="80%">
+</a>
+
+```js
+const cluster = require('cluster');
+const os = require('os');
+
+if (cluster.isMaster) {
+  const cpus = os.cpus().length;
+
+  console.log(`Forking for ${cpus} CPUs`);
+  for (let i = 0; i <cpus; i++) {
+    cluster.fork();
+  }
+} else {
+  require('./HttpServer');
+}
+
+```
+```
+C:\xampp\apache\bin>ab -c200 -t10 http://localhost:8080/
+This is ApacheBench, Version 2.3 <$Revision: 1807734 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking localhost (be patient)
+Finished 2989 requests
+
+
+Server Software:
+Server Hostname:        localhost
+Server Port:            8080
+
+Document Path:          /
+Document Length:        28 bytes
+
+Concurrency Level:      200
+Time taken for tests:   10.003 seconds
+Complete requests:      2989
+Failed requests:        0
+Total transferred:      307867 bytes
+HTML transferred:       83692 bytes
+Requests per second:    298.82 [#/sec] (mean)
+Time per request:       669.296 [ms] (mean)
+Time per request:       3.346 [ms] (mean, across all concurrent requests)
+Transfer rate:          30.06 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    0   0.5      0      24
+Processing:    85  645 107.6    661     795
+Waiting:       81  644 107.7    660     795
+Total:         85  645 107.6    661     795
+
+Percentage of the requests served within a certain time (ms)
+  50%    661
+  66%    685
+  75%    696
+  80%    703
+  90%    735
+  95%    766
+  98%    776
+  99%    779
+ 100%    795 (longest request)
 
 C:\xampp\apache\bin>
 
