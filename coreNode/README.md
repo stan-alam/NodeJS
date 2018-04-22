@@ -2527,6 +2527,10 @@ if (cluster.isMaster) {
 
 ```
 
+<a>
+  <img src="https://github.com/stan-alam/NodeJS/blob/develop/coreNode/10/40-50/svg_files/Notebook-27.svg" width="80%" height="80%">
+</a>
+
 ```
 #terminal output for BroadCasting messages via fork api in cluster.js
 
