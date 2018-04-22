@@ -2530,7 +2530,7 @@ if (cluster.isMaster) {
 
 ```
 
-## Terminal Output for BroadCasting messages via fork api in cluster.js**
+**Terminal Output for BroadCasting messages via fork api in cluster.js**
 
 ```
 $ node cluster.js
