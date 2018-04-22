@@ -2503,6 +2503,9 @@ Percentage of the requests served within a certain time (ms)
 C:\xampp\apache\bin>
 
 ```
+<a>
+  <img src="https://github.com/stan-alam/NodeJS/blob/develop/coreNode/10/40-50/svg_files/Notebook-27.svg" width="80%" height="80%">
+</a>
 
 ```js
 //BroadCast/cluster.js
@@ -2527,13 +2530,9 @@ if (cluster.isMaster) {
 
 ```
 
-<a>
-  <img src="https://github.com/stan-alam/NodeJS/blob/develop/coreNode/10/40-50/svg_files/Notebook-27.svg" width="80%" height="80%">
-</a>
+## Terminal Output for BroadCasting messages via fork api in cluster.js**
 
 ```
-#terminal output for BroadCasting messages via fork api in cluster.js
-
 $ node cluster.js
 Forking for 4 CPUs
 { '1': [Object], '2': [Object], '3': [Object], '4': [Object] }
