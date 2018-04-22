@@ -2503,3 +2503,74 @@ Percentage of the requests served within a certain time (ms)
 C:\xampp\apache\bin>
 
 ```
+
+```js
+//BroadCast/cluster.js
+const cluster = require('cluster');
+const os = require('os');
+
+if (cluster.isMaster) {
+  const cpus = os.cpus().length;
+
+  console.log(`Forking for ${cpus} CPUs`);
+  for (let i = 0; i <cpus; i++) {
+    cluster.fork();
+  }
+
+  console.dir(cluster.workers, { depth: 0 });
+  Object.values(cluster.workers).forEach(worker => {
+    worker.send(`Hi Worker ${worker.id}`)
+  });
+} else {
+  require('./HttpServer');
+}
+
+```
+
+```
+#terminal output for BroadCasting messages via fork api in cluster.js
+
+$ node cluster.js
+Forking for 4 CPUs
+{ '1': [Object], '2': [Object], '3': [Object], '4': [Object] }
+Begining process start 5980
+Begining process start 9816
+Begining process start 7144
+Begining process start 3212
+
+```
+```js
+//BroadCast/HttpServer.js broadcasting messages!
+const http = require('http');
+const pid = process.pid;
+
+http.createServer((req, res) => {
+  for (let i=0; i<1e7; i++); //to simulate CPU work
+  res.end(`Work handled by process ${pid}`);
+
+}).listen(8080, () => {
+  console.log(`Begining process start ${pid}`);
+});
+
+process.on('message', msg => {
+  console.log(`Message from master: ${msg}`);
+});
+
+```
+
+**messages are not in order**
+
+```
+$ node cluster.js
+Forking for 4 CPUs
+{ '1': [Object], '2': [Object], '3': [Object], '4': [Object] }
+Message from master: Hi Worker 1
+Begining process start 428
+Message from master: Hi Worker 2
+Message from master: Hi Worker 3
+Begining process start 7192
+Message from master: Hi Worker 4
+Begining process start 8336
+Begining process start 7092
+
+```
