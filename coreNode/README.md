@@ -2377,7 +2377,7 @@ http.createServer((req, res) => {
   res.end(`Work handled by process ${pid}`);
 
 }).listen(8080, () => {
-  console.log(`Begining process start ${pid}`);
+  console.log(`Beginning process start ${pid}`);
 });
 
 ```
@@ -2536,10 +2536,10 @@ if (cluster.isMaster) {
 $ node cluster.js
 Forking for 4 CPUs
 { '1': [Object], '2': [Object], '3': [Object], '4': [Object] }
-Begining process start 5980
-Begining process start 9816
-Begining process start 7144
-Begining process start 3212
+Beginning process start 5980
+Beginning process start 9816
+Beginning process start 7144
+Beginning process start 3212
 
 ```
 ```js
@@ -2552,7 +2552,7 @@ http.createServer((req, res) => {
   res.end(`Work handled by process ${pid}`);
 
 }).listen(8080, () => {
-  console.log(`Begining process start ${pid}`);
+  console.log(`Beginning process start ${pid}`);
 });
 
 process.on('message', msg => {
@@ -2568,13 +2568,13 @@ $ node cluster.js
 Forking for 4 CPUs
 { '1': [Object], '2': [Object], '3': [Object], '4': [Object] }
 Message from master: Hi Worker 1
-Begining process start 428
+Beginning process start 428
 Message from master: Hi Worker 2
 Message from master: Hi Worker 3
-Begining process start 7192
+Beginning process start 7192
 Message from master: Hi Worker 4
-Begining process start 8336
-Begining process start 7092
+Beginning process start 8336
+Beginning process start 7092
 
 ```
 <a>
@@ -2631,13 +2631,13 @@ http.createServer((req, res) => {
   res.write(`Work handled by process ${pid}`); //changed write to output both messages
   res.end(`Users: ${usersCount}`); //here the userCounts variable is controlled by the message interface
 }).listen(8080, () => {
-  console.log(`Begining process start ${pid}`);
+  console.log(`Beginning process start ${pid}`);
 });
 
 process.on('message', msg => {
 //  console.log(`Message from master: ${msg.toString()}`);
   usersCount = msg.usersCount;
 });
-// the master process in cluster2.js will reset the usercount every 10 secs through invokation of the mock db call
+// the master process in cluster2.js will reset the userscount every 10 secs through invocation of the mock db call
 
 ```
