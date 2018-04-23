@@ -8,7 +8,7 @@ http.createServer((req, res) => {
   res.write(`Work handled by process ${pid}`); //changed write to output both messages
   res.end(`Users: ${usersCount}`); //here the userCounts variable is controlled by the message interface
 }).listen(8080, () => {
-  console.log(`Begining process start ${pid}`);
+  console.log(`Beginning process start ${pid}`);
 });
 
 process.on('message', msg => {

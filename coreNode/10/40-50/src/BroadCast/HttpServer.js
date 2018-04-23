@@ -6,7 +6,7 @@ http.createServer((req, res) => {
   res.end(`Work handled by process ${pid}`);
 
 }).listen(8080, () => {
-  console.log(`Begining process start ${pid}`);
+  console.log(`Beginning process start ${pid}`);
 });
 
 process.on('message', msg => {

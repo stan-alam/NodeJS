@@ -25,7 +25,7 @@ const updateWorkers = () => {
   });
 };
 
-setInterval(updateWorkers, 1000); //update workers on 10 second interval, every 10 seconds worker(s) will receive count over comm channel    
+setInterval(updateWorkers, 1000); //update workers on 10 second interval, every 10 seconds worker(s) will receive count over comm channel
 } else {
   require('./HttpServer2');
 }
