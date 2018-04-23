@@ -2714,3 +2714,18 @@ Beginning process start 11208
 Worker 12 has crashed. Spinning up a new worker...
 
 ```
+
+**AB terminal output for MasterCluster.js**
+
+```
+C:\xampp\apache\bin>ab -c200 -t10 http://localhost:8080/
+This is ApacheBench, Version 2.3 <$Revision: 1807734 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking localhost (be patient)
+apr_socket_recv: An existing connection was forcibly closed by the remote host.
+  (730054)
+Total of 482 requests completed
+
+```
