@@ -2641,3 +2641,76 @@ process.on('message', msg => {
 // the master process in cluster2.js will reset the userscount every 10 secs through invocation of the mock db call
 
 ```
+<a>
+  <img src="https://github.com/stan-alam/NodeJS/blob/develop/coreNode/10/40-50/svg_files/Notebook-30.svg" width="80%" height="80%">
+</a>
+
+```js
+//MasterCluster.js
+const cluster = require('cluster');
+const os = require('os');
+
+if (cluster.isMaster){
+  const cpus = os.cpus().length;
+  for (let i = 0; i < cpus; i++) {
+    cluster.fork();
+   }
+
+   cluster.on('exit', (worker, code, signal) => {
+     if (code !== 0 && !worker.exitedAfterDisconnect) {
+       console.log(`Worker ${worker.id} has crashed. ` +
+         'Spinning up a new worker...');
+      cluster.fork();
+     }
+  });
+} else {
+  require('./HttpServer');
+}
+
+```
+
+```js
+//Availability/HttpServer.js
+const http = require('http');
+const pid = process.pid;
+
+http.createServer((req, res) => {
+  for (let i=0; i<1e7; i++); //to simulate CPU work
+  res.end(`Work handled by process ${pid}`);
+
+}).listen(8080, () => {
+  console.log(`Beginning process start ${pid}`);
+});
+
+setTimeout(() => {
+  process.exit(1) // kill at random
+
+}, Math.random() * 10000);
+
+```
+**Terminal Output**
+```
+$ node MasterCluster.js
+Beginning process start 9692
+Beginning process start 7092
+Beginning process start 5532
+Beginning process start 7192
+Worker 4 has crashed. Spinning up a new worker...
+Beginning process start 6472
+Worker 2 has crashed. Spinning up a new worker...
+Beginning process start 10716
+Worker 6 has crashed. Spinning up a new worker...
+Beginning process start 12180
+Worker 1 has crashed. Spinning up a new worker...
+Beginning process start 12204
+Worker 8 has crashed. Spinning up a new worker...
+Beginning process start 796
+Worker 5 has crashed. Spinning up a new worker...
+Beginning process start 10224
+Worker 9 has crashed. Spinning up a new worker...
+Beginning process start 10688
+Worker 3 has crashed. Spinning up a new worker...
+Beginning process start 11208
+Worker 12 has crashed. Spinning up a new worker...
+
+```
