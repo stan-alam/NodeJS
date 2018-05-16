@@ -26,8 +26,10 @@ process.on('SIGUSR2', () => {
 
     worker.on('exit', () => {
       if (!worker.exitedAfterDisconnect) //set flag if true, fork new worker
-      console.log();
-      return;
+      console.log(`Exited process ${worker.process.pid}`)
+      cluster.fork().on('Listening ... ', () => {
+        restartWorker(workerIndex + 1);
+      });
     });
       worker.disconnect();
   };
