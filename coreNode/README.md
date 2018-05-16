@@ -2791,7 +2791,7 @@ process.on('SIGUSR2', () => {
 }
 
 ```
-# PM2 - is console
+# PM2 - is cool! 
 
 **just use pm2 reload all  for zero downtime reload**
 
