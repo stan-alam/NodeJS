@@ -1,4 +1,4 @@
-## Core Node JS course work
+﻿## Core Node JS course work
 <a>
   <img src="https://github.com/stan-alam/NodeJS/blob/develop/coreNode/01/svg_files/Notebook-4.svg" width="80%" height="80%">
 </a>
@@ -2645,6 +2645,10 @@ process.on('message', msg => {
   <img src="https://github.com/stan-alam/NodeJS/blob/develop/coreNode/10/40-50/svg_files/Notebook-30.svg" width="80%" height="80%">
 </a>
 
+<a>
+  <img src="https://github.com/stan-alam/NodeJS/blob/develop/coreNode/10/40-50/svg_files/Notebook-31.svg" width="80%" height="80%">
+</a>
+
 ```js
 //MasterCluster.js
 const cluster = require('cluster');
@@ -2729,3 +2733,15 @@ apr_socket_recv: An existing connection was forcibly closed by the remote host.
 Total of 482 requests completed
 
 ```
+
+<a>
+  <img src="https://github.com/stan-alam/NodeJS/blob/develop/coreNode/10/40-50/svg_files/Notebook-32.svg" width="80%" height="80%">
+</a>
+
+<a>
+  <img src="https://github.com/stan-alam/NodeJS/blob/develop/coreNode/10/40-50/svg_files/Notebook-33.svg" width="80%" height="80%">
+</a>
+
+<a>
+  <img src="https://github.com/stan-alam/NodeJS/blob/develop/coreNode/10/40-50/svg_files/Notebook-34.svg" width="80%" height="80%">
+</a>
