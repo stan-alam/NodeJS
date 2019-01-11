@@ -2797,4 +2797,8 @@ process.on('SIGUSR2', () => {
 
 https://github.com/Unitech/pm2
 
-## Old Notes   
+## Old Notes (scanned)
+
+<a>
+  <img src="https://github.com/stan-alam/NodeJS/blob/develop/archive/ScanNotes/Scan01.jpg" width="80%" height="80%">
+</a>
