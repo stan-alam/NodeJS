@@ -2796,3 +2796,5 @@ process.on('SIGUSR2', () => {
 **just use pm2 reload all  for zero downtime reload**
 
 https://github.com/Unitech/pm2
+
+## Old Notes   
