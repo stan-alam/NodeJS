@@ -2811,6 +2811,6 @@ https://github.com/Unitech/pm2
   <img src="https://github.com/stan-alam/NodeJS/blob/develop/archive/ScanNotes/Scan03.jpg" width="80%" height="80%">
 </a>
 
-## Node Style Guid >>>
+## Node Style Guide >>>
 
          https://github.com/felixge/node-style-guide
