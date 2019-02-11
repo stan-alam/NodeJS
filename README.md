@@ -2797,6 +2797,58 @@ process.on('SIGUSR2', () => {
 
 https://github.com/Unitech/pm2
 
+### (3) BDD with Node
+
+<a>
+  <img src="https://github.com/stan-alam/NodeJS/blob/develop/moreNode/svg/prac_node/prac-node-0.svg" width="80%" height="80%">
+</a>
+
+<a>
+  <img src="https://github.com/stan-alam/NodeJS/blob/develop/moreNode/svg/prac_node/prac-node-1.svg" width="80%" height="80%">
+</a>
+
+<a>
+  <img src="https://github.com/stan-alam/NodeJS/blob/develop/moreNode/svg/prac_node/prac-node-2.svg" width="80%" height="80%">
+</a>
+
+<a>
+  <img src="https://github.com/stan-alam/NodeJS/blob/develop/moreNode/svg/prac_node/prac-node-3A.svg" width="80%" height="80%">
+</a>
+
+```js
+// Code Stub 01
+```
+<a>
+  <img src="https://github.com/stan-alam/NodeJS/blob/develop/moreNode/svg/prac_node/prac-node-3B.svg" width="80%" height="80%">
+</a>
+
+```js
+// Code Stub 02
+```
+<a>
+  <img src="https://github.com/stan-alam/NodeJS/blob/develop/moreNode/svg/prac_node/prac-node-4.svg" width="80%" height="80%">
+</a>
+
+<a>
+  <img src="https://github.com/stan-alam/NodeJS/blob/develop/moreNode/svg/prac_node/prac-node-5.svg" width="80%" height="80%">
+</a>
+
+<a>
+  <img src="https://github.com/stan-alam/NodeJS/blob/develop/moreNode/svg/prac_node/prac-node-6A.svg" width="80%" height="80%">
+</a>
+
+```js
+// Code Stub 03
+```
+
+<a>
+  <img src="https://github.com/stan-alam/NodeJS/blob/develop/moreNode/svg/prac_node/prac-node-6B.svg" width="80%" height="80%">
+</a>
+
+```js
+// Code Stub 04
+```
+
 ## Old Notes (scanned)
 
 <a>
