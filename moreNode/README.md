@@ -1,6 +1,6 @@
 ## more core Node
 
-### 3 BDD with Node
+### (3) BDD with Node
 
 <a>
   <img src="https://github.com/stan-alam/NodeJS/blob/develop/moreNode/svg/prac_node/prac-node-0.svg" width="80%" height="80%">
@@ -51,10 +51,6 @@
 ```js
 // Code Stub 04
 ```
-
-<a>
-  <img src="https://github.com/stan-alam/NodeJS/blob/develop/moreNode/svg/prac_node/prac-node-3B.svg" width="80%" height="80%">
-</a>
 
 https://medium.freecodecamp.org/node-package-manager-npm-explained-by-directing-a-movie-9c90f1d16d33
 
