@@ -1,5 +1,61 @@
 ## more core Node
 
+### 3 BDD with Node
+
+<a>
+  <img src="https://github.com/stan-alam/NodeJS/blob/develop/moreNode/svg/prac_node/prac-node-0.svg" width="80%" height="80%">
+</a>
+
+<a>
+  <img src="https://github.com/stan-alam/NodeJS/blob/develop/moreNode/svg/prac_node/prac-node-1.svg" width="80%" height="80%">
+</a>
+
+<a>
+  <img src="https://github.com/stan-alam/NodeJS/blob/develop/moreNode/svg/prac_node/prac-node-2.svg" width="80%" height="80%">
+</a>
+
+<a>
+  <img src="https://github.com/stan-alam/NodeJS/blob/develop/moreNode/svg/prac_node/prac-node-3A.svg" width="80%" height="80%">
+</a>
+
+```js
+// Code Stub 01
+```
+<a>
+  <img src="https://github.com/stan-alam/NodeJS/blob/develop/moreNode/svg/prac_node/prac-node-3B.svg" width="80%" height="80%">
+</a>
+
+```js
+// Code Stub 02
+```
+<a>
+  <img src="https://github.com/stan-alam/NodeJS/blob/develop/moreNode/svg/prac_node/prac-node-4.svg" width="80%" height="80%">
+</a>
+
+<a>
+  <img src="https://github.com/stan-alam/NodeJS/blob/develop/moreNode/svg/prac_node/prac-node-5.svg" width="80%" height="80%">
+</a>
+
+<a>
+  <img src="https://github.com/stan-alam/NodeJS/blob/develop/moreNode/svg/prac_node/prac-node-6A.svg" width="80%" height="80%">
+</a>
+
+```js
+// Code Stub 03
+```
+
+<a>
+  <img src="https://github.com/stan-alam/NodeJS/blob/develop/moreNode/svg/prac_node/prac-node-6B.svg" width="80%" height="80%">
+</a>
+
+```js
+// Code Stub 04
+```
+
+<a>
+  <img src="https://github.com/stan-alam/NodeJS/blob/develop/moreNode/svg/prac_node/prac-node-3B.svg" width="80%" height="80%">
+</a>
+
 https://medium.freecodecamp.org/node-package-manager-npm-explained-by-directing-a-movie-9c90f1d16d33
 
 Advanced NodeJS: Objectives build an MVC app, a REST API, and a CLI in plain Node JS
