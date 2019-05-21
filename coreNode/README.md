@@ -2247,9 +2247,9 @@ fs.createReadStream(file)
   <img src="https://github.com/stan-alam/NodeJS/blob/develop/coreNode/10/40-50/svg_files/Notebook-14.svg" width="80%" height="80%">
 </a>
 
-<a>
+<p align="center">
   <img src="https://github.com/stan-alam/NodeJS/blob/develop/coreNode/10/40-50/svg_files/childProcess.svg" width="50%" height="50%">
-</a>
+</p>
 
 <a>
   <img src="https://github.com/stan-alam/NodeJS/blob/develop/coreNode/10/40-50/svg_files/Notebook-15.svg" width="80%" height="80%">
