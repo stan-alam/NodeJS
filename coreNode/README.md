@@ -1509,9 +1509,9 @@ server.listen(443);
   <img src="https://github.com/stan-alam/NodeJS/blob/develop/coreNode/10/15-30/svg_files/Notebook-22.svg" width="80%" height="80%">
 </a>
 
-<a>
+<p align="center">
   <img src="https://github.com/stan-alam/NodeJS/blob/master/coreNode/10/15-30/svg_files/nodeHTTP.svg" width="60%" height="60%">
-</a>
+</p>
 
 <a>
   <img src="https://github.com/stan-alam/NodeJS/blob/develop/coreNode/10/15-30/svg_files/Notebook-23.svg" width="80%" height="80%">
@@ -2087,9 +2087,9 @@ server.listen(8888);
 ```
 ## Four Types of Streams in Node
 
-<a>
+<p align="center">
   <img src="https://github.com/stan-alam/NodeJS/blob/develop/coreNode/10/40-50/svg_files/typeOfStreams.svg" width="50%" height="50%">
-</a>
+</p>
 
 <a>
   <img src="https://github.com/stan-alam/NodeJS/blob/develop/coreNode/10/40-50/svg_files/Notebook-4.svg" width="80%" height="80%">
