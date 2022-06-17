@@ -1,0 +1,22 @@
+{
+  "name": "nodedocker",
+  "version": "1.0.0",
+  "description": "node docker project",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stan-alam/NodeJS.git"
+  },
+  "author": "stan alam",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stan-alam/NodeJS/issues"
+  },
+  "homepage": "https://github.com/stan-alam/NodeJS#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}

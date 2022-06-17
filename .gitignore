@@ -26,5 +26,6 @@ build/Release
 node_modules
 npm-debug.log*
 mochawesome-reports/*
+/nodeDocker/node_modules/*
 
 
